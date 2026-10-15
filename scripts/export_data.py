@@ -279,7 +279,7 @@ def main():
         "matched_speedband_segments": int(len(m)),
         "outputs_sha256": {name: sha256(DATA / name) for name in outputs},
     }
-    (DATA / "source_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    (DATA / "source_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

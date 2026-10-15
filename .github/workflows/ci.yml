@@ -1,0 +1,52 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  schemas-and-measures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Fetch Microsoft's PBIP/PBIR JSON schemas (pinned commit)
+        run: bash tools/fetch_schemas.sh
+      - name: JSON schema validation of the PBIR files
+        run: python tools/validate_schemas.py
+      - name: Tests (DAX measures vs pandas, model, report, schemas)
+        env:
+          SCHEMAS_REQUIRED: "1"
+        run: python -m pytest -q
+      - name: Mutation check (every planted bug must fail a test)
+        run: python tests/mutate.py --json mutation.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mutation-results
+          path: mutation.json
+          if-no-files-found: ignore
+
+  tmdl-tom:
+    # Microsoft's Tabular Object Model reads the TMDL folder; the summary it writes is compared with the
+    # project's own TMDL reader.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Parse and validate the semantic model with TOM (TmdlSerializer, Model.Validate)
+        shell: pwsh
+        run: ./tools/check_tmdl.ps1 -Out .tom/tom_model.json
+      - name: Compare TOM's view of the model with the test reader
+        env:
+          TOM_REQUIRED: "1"
+        run: python -m pytest -q tests/test_tom_crosscheck.py

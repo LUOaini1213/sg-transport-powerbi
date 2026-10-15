@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "spd_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 2000,
+    "height": 120,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "AM Peak Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.AM Peak Speed (km/h)",
+              "nativeQueryRef": "AM Peak Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "Night Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.Night Speed (km/h)",
+              "nativeQueryRef": "Night Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "AM Peak / Night Speed"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.AM Peak / Night Speed",
+              "nativeQueryRef": "AM Peak / Night Speed"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "Mean Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.Mean Speed (km/h)",
+              "nativeQueryRef": "Mean Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "P15 Link-Hour Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.P15 Link-Hour Speed (km/h)",
+              "nativeQueryRef": "P15 Link-Hour Speed (km/h)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'All corridor links'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

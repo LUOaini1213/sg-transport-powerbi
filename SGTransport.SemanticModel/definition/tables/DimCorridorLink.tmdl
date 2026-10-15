@@ -1,0 +1,71 @@
+/// Directed stop-to-stop links shared by 10 or more bus services (from sg-bus-network-monitor
+/// outputs/corridor_links.csv), kept when at least one speed snapshot covered half the link.
+table DimCorridorLink
+
+	column LinkKey
+		dataType: string
+		isKey
+		summarizeBy: none
+		sourceColumn: LinkKey
+
+	column FromStop
+		dataType: string
+		summarizeBy: none
+		sourceColumn: FromStop
+
+	column ToStop
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ToStop
+
+	column LinkName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LinkName
+
+	column RoadName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RoadName
+
+	column Services
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Services
+
+	/// Scheduled buses per hour in the weekday AM peak, from DataMall service frequencies.
+	column AMPeakBusesPerHour
+		dataType: double
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: AMPeakBusesPerHour
+
+	column LinkKm
+		dataType: double
+		formatString: 0.00
+		summarizeBy: none
+		sourceColumn: LinkKm
+
+	partition DimCorridorLink = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_corridor_link.csv") else File.Contents(DataFolder & "dim_corridor_link.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{
+							{"LinkKey", type text}, {"FromStop", type text}, {"ToStop", type text}, {"LinkName", type text},
+							{"RoadName", type text}, {"Services", Int64.Type}, {"AMPeakBusesPerHour", type number},
+							{"LinkKm", type number}
+						},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

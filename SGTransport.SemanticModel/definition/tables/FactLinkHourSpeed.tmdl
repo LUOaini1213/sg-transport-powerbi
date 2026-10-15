@@ -1,0 +1,88 @@
+/// General-traffic speed on each corridor link, from LTA DataMall speed-band snapshots (about every 20
+/// minutes, 26 September to 3 October 2026). Grain: one row per link, date and hour of day. A snapshot's
+/// link speed is the length-weighted mean of the band midpoints of the matched road segments.
+table FactLinkHourSpeed
+
+	/// Mean link speed over all snapshots in the filter context (each snapshot weighs the same).
+	measure 'Mean Speed (km/h)' = DIVIDE(SUM(FactLinkHourSpeed[SpeedKmhSum]), SUM(FactLinkHourSpeed[Snapshots]))
+		formatString: 0.0
+
+	/// 15th percentile of the link-hour mean speeds in the filter context: the slow tail.
+	measure 'P15 Link-Hour Speed (km/h)' = PERCENTILE.INC(FactLinkHourSpeed[MeanSpeedKmh], 0.15)
+		formatString: 0.0
+
+	/// Mean speed on weekdays in the hours starting 07:00 and 08:00.
+	measure 'AM Peak Speed (km/h)' = CALCULATE([Mean Speed (km/h)], FactLinkHourSpeed[Hour] IN {7, 8}, DimDate[DayType] = "WEEKDAY")
+		formatString: 0.0
+
+	/// Mean speed in the hours starting 22:00 to 04:00, on any day: the reference for free flow.
+	measure 'Night Speed (km/h)' = CALCULATE([Mean Speed (km/h)], FactLinkHourSpeed[Hour] IN {22, 23, 0, 1, 2, 3, 4})
+		formatString: 0.0
+
+	/// AM peak speed as a share of night speed. Lower means a slower peak relative to free flow.
+	measure 'AM Peak / Night Speed' = DIVIDE([AM Peak Speed (km/h)], [Night Speed (km/h)])
+		formatString: 0.00
+
+	column LinkKey
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: LinkKey
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Hour of day (Singapore time) at which the snapshots were taken, 0 to 23.
+	column Hour
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Hour
+
+	column Snapshots
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Snapshots
+
+	column SpeedKmhSum
+		dataType: double
+		isHidden
+		summarizeBy: sum
+		sourceColumn: SpeedKmhSum
+
+	column MeanSpeedKmh
+		dataType: double
+		isHidden
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: MeanSpeedKmh
+
+	partition FactLinkHourSpeed = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_link_hour_speed.csv") else File.Contents(DataFolder & "fact_link_hour_speed.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{
+							{"LinkKey", type text}, {"Date", type date}, {"Hour", Int64.Type}, {"Snapshots", Int64.Type},
+							{"SpeedKmhSum", type number}, {"MeanSpeedKmh", type number}
+						},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

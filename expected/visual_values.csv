@@ -1,0 +1,282 @@
+page,visual,row,measure,value,display,context
+Ridership,rid_by_area,WOODLANDS,Avg Weekday Boardings,287127.1,"287,127",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,TAMPINES,Avg Weekday Boardings,278449.95,"278,450",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BEDOK,Avg Weekday Boardings,251710.7,"251,711",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,JURONG WEST,Avg Weekday Boardings,247208.4,"247,208",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,YISHUN,Avg Weekday Boardings,217009.75,"217,010",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,HOUGANG,Avg Weekday Boardings,200424.65,"200,425",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BUKIT MERAH,Avg Weekday Boardings,176143.55,"176,144",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,ANG MO KIO,Avg Weekday Boardings,172774.85,"172,775",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SENGKANG,Avg Weekday Boardings,159641.9,"159,642",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,GEYLANG,Avg Weekday Boardings,156684.2,"156,684",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,QUEENSTOWN,Avg Weekday Boardings,146349.95,"146,350",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BUKIT BATOK,Avg Weekday Boardings,144265.25,"144,265",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,TOA PAYOH,Avg Weekday Boardings,144210.3,"144,210",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,CLEMENTI,Avg Weekday Boardings,131645.65,"131,646",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,CHOA CHU KANG,Avg Weekday Boardings,126849.1,"126,849",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,PASIR RIS,Avg Weekday Boardings,123967.55,"123,968",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SERANGOON,Avg Weekday Boardings,112491.55,"112,492",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,JURONG EAST,Avg Weekday Boardings,105221.6,"105,222",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,KALLANG,Avg Weekday Boardings,101800.15,"101,800",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BUKIT PANJANG,Avg Weekday Boardings,94604.6,"94,605",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,PUNGGOL,Avg Weekday Boardings,89500.55,"89,501",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BUKIT TIMAH,Avg Weekday Boardings,84421.7,"84,422",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SEMBAWANG,Avg Weekday Boardings,82769.4,"82,769",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BISHAN,Avg Weekday Boardings,79683.05,"79,683",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,NOVENA,Avg Weekday Boardings,64923.15,"64,923",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,DOWNTOWN CORE,Avg Weekday Boardings,56373.15,"56,373",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,ROCHOR,Avg Weekday Boardings,43000.15,"43,000",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,CHANGI,Avg Weekday Boardings,40189.45,"40,189",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,MARINE PARADE,Avg Weekday Boardings,39128.1,"39,128",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,ORCHARD,Avg Weekday Boardings,37906.2,"37,906",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,OUTRAM,Avg Weekday Boardings,31499.65,"31,500",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,TANGLIN,Avg Weekday Boardings,28519.2,"28,519",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,MUSEUM,Avg Weekday Boardings,24598.85,"24,599",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SUNGEI KADUT,Avg Weekday Boardings,23699.35,"23,699",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,PIONEER,Avg Weekday Boardings,23277.25,"23,277",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,WESTERN WATER CATCHMENT,Avg Weekday Boardings,21375.75,"21,376",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,OUTSIDE SINGAPORE,Avg Weekday Boardings,18346.1,"18,346",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,TUAS,Avg Weekday Boardings,18156.15,"18,156",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,TENGAH,Avg Weekday Boardings,17766.25,"17,766",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SINGAPORE RIVER,Avg Weekday Boardings,15169.5,"15,170",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,RIVER VALLEY,Avg Weekday Boardings,12205.1,"12,205",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,PAYA LEBAR,Avg Weekday Boardings,10977.3,"10,977",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,NEWTON,Avg Weekday Boardings,9791.8,"9,792",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SELETAR,Avg Weekday Boardings,8449.2,"8,449",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,BOON LAY,Avg Weekday Boardings,6799.8,"6,800",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,CENTRAL WATER CATCHMENT,Avg Weekday Boardings,5516.6,"5,517",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,MANDAI,Avg Weekday Boardings,3908.9,"3,909",DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,LIM CHU KANG,Avg Weekday Boardings,768.65,769,DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,CHANGI BAY,Avg Weekday Boardings,503.85,504,DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,SOUTHERN ISLANDS,Avg Weekday Boardings,497.05,497,DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,STRAITS VIEW,Avg Weekday Boardings,315.25,315,DimDate[YearMonth] = 2026-08
+Ridership,rid_by_area,MARINA SOUTH,Avg Weekday Boardings,35.65,36,DimDate[YearMonth] = 2026-08
+Ridership,rid_cards,,Avg Weekday Boardings,4278652.85,"4,278,653",DimDate[YearMonth] = 2026-08
+Ridership,rid_cards,,Avg Weekday Boardings MoM %,0.01634149662,+1.6%,DimDate[YearMonth] = 2026-08
+Ridership,rid_cards,,Weekday Boardings,85573057,"85,573,057",DimDate[YearMonth] = 2026-08
+Ridership,rid_cards,,Weekday Boardings MoM %,-0.1162247856,-11.6%,DimDate[YearMonth] = 2026-08
+Ridership,rid_cards,,Avg Weekend/Holiday Boardings,3394638.909,"3,394,639",DimDate[YearMonth] = 2026-08
+Ridership,rid_perday_by_month,2026-02,Avg Weekday Boardings,4162920.778,"4,162,921",
+Ridership,rid_perday_by_month,2026-06,Avg Weekday Boardings,3779549.381,"3,779,549",
+Ridership,rid_perday_by_month,2026-07,Avg Weekday Boardings,4209857.478,"4,209,857",
+Ridership,rid_perday_by_month,2026-08,Avg Weekday Boardings,4278652.85,"4,278,653",
+Ridership,rid_top_stops,22009 | Boon Lay Int | JURONG WEST,Avg Weekday Boardings,66078.8,"66,079",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,22009 | Boon Lay Int | JURONG WEST,Avg Weekday Boardings MoM %,0.07272596374,+7.3%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,46009 | Woodlands Int | WOODLANDS,Avg Weekday Boardings,60011.45,"60,011",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,46009 | Woodlands Int | WOODLANDS,Avg Weekday Boardings MoM %,-0.01495108167,-1.5%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,75009 | Tampines Int | TAMPINES,Avg Weekday Boardings,44106.6,"44,107",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,75009 | Tampines Int | TAMPINES,Avg Weekday Boardings MoM %,0.01017371432,+1.0%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,59009 | Yishun Int | YISHUN,Avg Weekday Boardings,37220.95,"37,221",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,59009 | Yishun Int | YISHUN,Avg Weekday Boardings MoM %,0.002119760591,+0.2%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,52009 | Toa Payoh Int | TOA PAYOH,Avg Weekday Boardings,30322.6,"30,323",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,52009 | Toa Payoh Int | TOA PAYOH,Avg Weekday Boardings MoM %,0.007127673708,+0.7%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,84009 | Bedok Int | BEDOK,Avg Weekday Boardings,28402.05,"28,402",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,84009 | Bedok Int | BEDOK,Avg Weekday Boardings MoM %,0.001320000736,+0.1%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,54009 | Ang Mo Kio Int | ANG MO KIO,Avg Weekday Boardings,24438.35,"24,438",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,54009 | Ang Mo Kio Int | ANG MO KIO,Avg Weekday Boardings MoM %,0.008358194764,+0.8%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,77009 | Pasir Ris Int | PASIR RIS,Avg Weekday Boardings,23170.35,"23,170",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,77009 | Pasir Ris Int | PASIR RIS,Avg Weekday Boardings MoM %,0.03220080458,+3.2%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,44009 | Choa Chu Kang Int | CHOA CHU KANG,Avg Weekday Boardings,22554.6,"22,555",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,44009 | Choa Chu Kang Int | CHOA CHU KANG,Avg Weekday Boardings MoM %,0.004120574418,+0.4%,DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,43009 | Bt Batok Int | BUKIT BATOK,Avg Weekday Boardings,22410.85,"22,411",DimDate[YearMonth] = 2026-08
+Ridership,rid_top_stops,43009 | Bt Batok Int | BUKIT BATOK,Avg Weekday Boardings MoM %,-0.01217974147,-1.2%,DimDate[YearMonth] = 2026-08
+Ridership,rid_total_by_month,2026-02,Weekday Boardings,74932574,"74,932,574",
+Ridership,rid_total_by_month,2026-06,Weekday Boardings,79370537,"79,370,537",
+Ridership,rid_total_by_month,2026-07,Weekday Boardings,96826722,"96,826,722",
+Ridership,rid_total_by_month,2026-08,Weekday Boardings,85573057,"85,573,057",
+Corridor speeds,spd_by_hour,0,Mean Speed (km/h),45.31001037,45.3,
+Corridor speeds,spd_by_hour,0,P15 Link-Hour Speed (km/h),35.49214,35.5,
+Corridor speeds,spd_by_hour,1,Mean Speed (km/h),47.87207261,47.9,
+Corridor speeds,spd_by_hour,1,P15 Link-Hour Speed (km/h),38.621075,38.6,
+Corridor speeds,spd_by_hour,2,Mean Speed (km/h),48.76968251,48.8,
+Corridor speeds,spd_by_hour,2,P15 Link-Hour Speed (km/h),39.242,39.2,
+Corridor speeds,spd_by_hour,3,Mean Speed (km/h),49.02491859,49.0,
+Corridor speeds,spd_by_hour,3,P15 Link-Hour Speed (km/h),40.68861,40.7,
+Corridor speeds,spd_by_hour,4,Mean Speed (km/h),48.6750176,48.7,
+Corridor speeds,spd_by_hour,4,P15 Link-Hour Speed (km/h),39.8135,39.8,
+Corridor speeds,spd_by_hour,5,Mean Speed (km/h),47.86979758,47.9,
+Corridor speeds,spd_by_hour,5,P15 Link-Hour Speed (km/h),39.098,39.1,
+Corridor speeds,spd_by_hour,6,Mean Speed (km/h),43.57000495,43.6,
+Corridor speeds,spd_by_hour,6,P15 Link-Hour Speed (km/h),35.02115,35.0,
+Corridor speeds,spd_by_hour,7,Mean Speed (km/h),40.30205611,40.3,
+Corridor speeds,spd_by_hour,7,P15 Link-Hour Speed (km/h),30.85938,30.9,
+Corridor speeds,spd_by_hour,8,Mean Speed (km/h),38.87306106,38.9,
+Corridor speeds,spd_by_hour,8,P15 Link-Hour Speed (km/h),30.48031,30.5,
+Corridor speeds,spd_by_hour,9,Mean Speed (km/h),38.83891749,38.8,
+Corridor speeds,spd_by_hour,9,P15 Link-Hour Speed (km/h),29.04251,29.0,
+Corridor speeds,spd_by_hour,10,Mean Speed (km/h),40.11959846,40.1,
+Corridor speeds,spd_by_hour,10,P15 Link-Hour Speed (km/h),31.1887,31.2,
+Corridor speeds,spd_by_hour,11,Mean Speed (km/h),40.3403835,40.3,
+Corridor speeds,spd_by_hour,11,P15 Link-Hour Speed (km/h),31.2166,31.2,
+Corridor speeds,spd_by_hour,12,Mean Speed (km/h),40.21232249,40.2,
+Corridor speeds,spd_by_hour,12,P15 Link-Hour Speed (km/h),31.258175,31.3,
+Corridor speeds,spd_by_hour,13,Mean Speed (km/h),40.4536718,40.5,
+Corridor speeds,spd_by_hour,13,P15 Link-Hour Speed (km/h),31.37804,31.4,
+Corridor speeds,spd_by_hour,14,Mean Speed (km/h),40.25631113,40.3,
+Corridor speeds,spd_by_hour,14,P15 Link-Hour Speed (km/h),30.72,30.7,
+Corridor speeds,spd_by_hour,15,Mean Speed (km/h),40.27918581,40.3,
+Corridor speeds,spd_by_hour,15,P15 Link-Hour Speed (km/h),31.031445,31.0,
+Corridor speeds,spd_by_hour,16,Mean Speed (km/h),40.31838614,40.3,
+Corridor speeds,spd_by_hour,16,P15 Link-Hour Speed (km/h),31.4549,31.5,
+Corridor speeds,spd_by_hour,17,Mean Speed (km/h),39.30618792,39.3,
+Corridor speeds,spd_by_hour,17,P15 Link-Hour Speed (km/h),30.72213,30.7,
+Corridor speeds,spd_by_hour,18,Mean Speed (km/h),37.8175571,37.8,
+Corridor speeds,spd_by_hour,18,P15 Link-Hour Speed (km/h),28.1926,28.2,
+Corridor speeds,spd_by_hour,19,Mean Speed (km/h),38.39867308,38.4,
+Corridor speeds,spd_by_hour,19,P15 Link-Hour Speed (km/h),28.9877,29.0,
+Corridor speeds,spd_by_hour,20,Mean Speed (km/h),40.24809027,40.2,
+Corridor speeds,spd_by_hour,20,P15 Link-Hour Speed (km/h),31.00336,31.0,
+Corridor speeds,spd_by_hour,21,Mean Speed (km/h),40.92306789,40.9,
+Corridor speeds,spd_by_hour,21,P15 Link-Hour Speed (km/h),31.64582,31.6,
+Corridor speeds,spd_by_hour,22,Mean Speed (km/h),41.68535561,41.7,
+Corridor speeds,spd_by_hour,22,P15 Link-Hour Speed (km/h),32.42527,32.4,
+Corridor speeds,spd_by_hour,23,Mean Speed (km/h),43.37967624,43.4,
+Corridor speeds,spd_by_hour,23,P15 Link-Hour Speed (km/h),33.605995,33.6,
+Corridor speeds,spd_cards,,AM Peak Speed (km/h),39.48548751,39.5,
+Corridor speeds,spd_cards,,Night Speed (km/h),44.84226363,44.8,
+Corridor speeds,spd_cards,,AM Peak / Night Speed,0.8805417994,0.88,
+Corridor speeds,spd_cards,,Mean Speed (km/h),41.12458558,41.1,
+Corridor speeds,spd_cards,,P15 Link-Hour Speed (km/h),31.45327,31.5,
+Corridor speeds,spd_links,Upp East Coast Rd: Calvary Ably of God Ch to Bef Bayshore Stn Exit 3 | 11 | 55.36,AM Peak Speed (km/h),18.69228571,18.7,
+Corridor speeds,spd_links,Upp East Coast Rd: Calvary Ably of God Ch to Bef Bayshore Stn Exit 3 | 11 | 55.36,Night Speed (km/h),40.74448,40.7,
+Corridor speeds,spd_links,Upp East Coast Rd: Calvary Ably of God Ch to Bef Bayshore Stn Exit 3 | 11 | 55.36,AM Peak / Night Speed,0.4587685427,0.46,
+Corridor speeds,spd_links,C'wealth Ave West: Blk 317 to Clementi Stn Exit B | 11 | 69.99,AM Peak Speed (km/h),24.71742857,24.7,
+Corridor speeds,spd_links,C'wealth Ave West: Blk 317 to Clementi Stn Exit B | 11 | 69.99,Night Speed (km/h),44.79212,44.8,
+Corridor speeds,spd_links,C'wealth Ave West: Blk 317 to Clementi Stn Exit B | 11 | 69.99,AM Peak / Night Speed,0.5518253785,0.55,
+Corridor speeds,spd_links,Upp S'goon Rd: Potong Pasir Stn Exit B to Sant Ritz | 11 | 52.16,AM Peak Speed (km/h),30.49642857,30.5,
+Corridor speeds,spd_links,Upp S'goon Rd: Potong Pasir Stn Exit B to Sant Ritz | 11 | 52.16,Night Speed (km/h),53.11524,53.1,
+Corridor speeds,spd_links,Upp S'goon Rd: Potong Pasir Stn Exit B to Sant Ritz | 11 | 52.16,AM Peak / Night Speed,0.5741559027,0.57,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Parkwood Residences to Aft Phillips Ave | 15 | 67.81,AM Peak Speed (km/h),26.73785714,26.7,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Parkwood Residences to Aft Phillips Ave | 15 | 67.81,Night Speed (km/h),45.44694,45.4,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Parkwood Residences to Aft Phillips Ave | 15 | 67.81,AM Peak / Night Speed,0.5883312967,0.59,
+Corridor speeds,spd_links,Yishun Ave 2: Bef Khatib Stn to Blk 790 | 16 | 80.63,AM Peak Speed (km/h),26.09385714,26.1,
+Corridor speeds,spd_links,Yishun Ave 2: Bef Khatib Stn to Blk 790 | 16 | 80.63,Night Speed (km/h),40.60146,40.6,
+Corridor speeds,spd_links,Yishun Ave 2: Bef Khatib Stn to Blk 790 | 16 | 80.63,AM Peak / Night Speed,0.6426827297,0.64,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Bef Yio Chu Kang Chapel to Parkwood Residences | 17 | 73.03,AM Peak Speed (km/h),36.21385714,36.2,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Bef Yio Chu Kang Chapel to Parkwood Residences | 17 | 73.03,Night Speed (km/h),55.35468,55.4,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Bef Yio Chu Kang Chapel to Parkwood Residences | 17 | 73.03,AM Peak / Night Speed,0.6542149127,0.65,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Blk 953 to Gracehaven S Army | 11 | 53.22,AM Peak Speed (km/h),28.77257143,28.8,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Blk 953 to Gracehaven S Army | 11 | 53.22,Night Speed (km/h),43.32608,43.3,
+Corridor speeds,spd_links,Yio Chu Kang Rd: Blk 953 to Gracehaven S Army | 11 | 53.22,AM Peak / Night Speed,0.6640935766,0.66,
+Corridor speeds,spd_links,Marine Parade Rd: Marine Terr Stn Exit 1 to Tao Nan Sch | 10 | 52.02,AM Peak Speed (km/h),27.61528571,27.6,
+Corridor speeds,spd_links,Marine Parade Rd: Marine Terr Stn Exit 1 to Tao Nan Sch | 10 | 52.02,Night Speed (km/h),41.22078,41.2,
+Corridor speeds,spd_links,Marine Parade Rd: Marine Terr Stn Exit 1 to Tao Nan Sch | 10 | 52.02,AM Peak / Night Speed,0.6699360302,0.67,
+Corridor speeds,spd_links,Choa Chu Kang Rd: Blk 26 to Phoenix Stn | 10 | 60.02,AM Peak Speed (km/h),28.93042857,28.9,
+Corridor speeds,spd_links,Choa Chu Kang Rd: Blk 26 to Phoenix Stn | 10 | 60.02,Night Speed (km/h),42.92754,42.9,
+Corridor speeds,spd_links,Choa Chu Kang Rd: Blk 26 to Phoenix Stn | 10 | 60.02,AM Peak / Night Speed,0.6739363255,0.67,
+Corridor speeds,spd_links,Tampines Ave 10: Bef Tampines Lk to Aft Tampines Lk | 12 | 78.79,AM Peak Speed (km/h),35.93371429,35.9,
+Corridor speeds,spd_links,Tampines Ave 10: Bef Tampines Lk to Aft Tampines Lk | 12 | 78.79,Night Speed (km/h),51.867,51.9,
+Corridor speeds,spd_links,Tampines Ave 10: Bef Tampines Lk to Aft Tampines Lk | 12 | 78.79,AM Peak / Night Speed,0.6928049489,0.69,
+Walking coverage,cov_by_area,SOUTHERN ISLANDS,Walk Coverage %,0,0.0%,
+Walking coverage,cov_by_area,SOUTHERN ISLANDS,Straight-line Coverage %,0,0.0%,
+Walking coverage,cov_by_area,NEWTON,Walk Coverage %,0.3064585559,30.6%,
+Walking coverage,cov_by_area,NEWTON,Straight-line Coverage %,0.8191880317,81.9%,
+Walking coverage,cov_by_area,TANGLIN,Walk Coverage %,0.4532395698,45.3%,
+Walking coverage,cov_by_area,TANGLIN,Straight-line Coverage %,0.8208847403,82.1%,
+Walking coverage,cov_by_area,BUKIT TIMAH,Walk Coverage %,0.5007303224,50.1%,
+Walking coverage,cov_by_area,BUKIT TIMAH,Straight-line Coverage %,0.7566929461,75.7%,
+Walking coverage,cov_by_area,SUNGEI KADUT,Walk Coverage %,0.5167560606,51.7%,
+Walking coverage,cov_by_area,SUNGEI KADUT,Straight-line Coverage %,0.7842878788,78.4%,
+Walking coverage,cov_by_area,BISHAN,Walk Coverage %,0.6556372058,65.6%,
+Walking coverage,cov_by_area,BISHAN,Straight-line Coverage %,0.9156890222,91.6%,
+Walking coverage,cov_by_area,TENGAH,Walk Coverage %,0.6639796078,66.4%,
+Walking coverage,cov_by_area,TENGAH,Straight-line Coverage %,0.9143053595,91.4%,
+Walking coverage,cov_by_area,BEDOK,Walk Coverage %,0.7045608179,70.5%,
+Walking coverage,cov_by_area,BEDOK,Straight-line Coverage %,0.9990347317,99.9%,
+Walking coverage,cov_by_area,TAMPINES,Walk Coverage %,0.7114895619,71.1%,
+Walking coverage,cov_by_area,TAMPINES,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,RIVER VALLEY,Walk Coverage %,0.7242303937,72.4%,
+Walking coverage,cov_by_area,RIVER VALLEY,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,NOVENA,Walk Coverage %,0.7395346689,74.0%,
+Walking coverage,cov_by_area,NOVENA,Straight-line Coverage %,0.9650650677,96.5%,
+Walking coverage,cov_by_area,SEMBAWANG,Walk Coverage %,0.7430629545,74.3%,
+Walking coverage,cov_by_area,SEMBAWANG,Straight-line Coverage %,0.9946141458,99.5%,
+Walking coverage,cov_by_area,ANG MO KIO,Walk Coverage %,0.746730996,74.7%,
+Walking coverage,cov_by_area,ANG MO KIO,Straight-line Coverage %,0.9721821962,97.2%,
+Walking coverage,cov_by_area,BUKIT PANJANG,Walk Coverage %,0.7507621251,75.1%,
+Walking coverage,cov_by_area,BUKIT PANJANG,Straight-line Coverage %,0.9941035492,99.4%,
+Walking coverage,cov_by_area,PASIR RIS,Walk Coverage %,0.7800617563,78.0%,
+Walking coverage,cov_by_area,PASIR RIS,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,TOA PAYOH,Walk Coverage %,0.7846295085,78.5%,
+Walking coverage,cov_by_area,TOA PAYOH,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,SINGAPORE RIVER,Walk Coverage %,0.7875713647,78.8%,
+Walking coverage,cov_by_area,SINGAPORE RIVER,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,SERANGOON,Walk Coverage %,0.7904146532,79.0%,
+Walking coverage,cov_by_area,SERANGOON,Straight-line Coverage %,0.9632851496,96.3%,
+Walking coverage,cov_by_area,WOODLANDS,Walk Coverage %,0.7939533234,79.4%,
+Walking coverage,cov_by_area,WOODLANDS,Straight-line Coverage %,0.9834747219,98.3%,
+Walking coverage,cov_by_area,JURONG EAST,Walk Coverage %,0.7949135317,79.5%,
+Walking coverage,cov_by_area,JURONG EAST,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,MANDAI,Walk Coverage %,0.8034764151,80.3%,
+Walking coverage,cov_by_area,MANDAI,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,CLEMENTI,Walk Coverage %,0.8078310047,80.8%,
+Walking coverage,cov_by_area,CLEMENTI,Straight-line Coverage %,0.9903945591,99.0%,
+Walking coverage,cov_by_area,GEYLANG,Walk Coverage %,0.8167332596,81.7%,
+Walking coverage,cov_by_area,GEYLANG,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,QUEENSTOWN,Walk Coverage %,0.8234621306,82.3%,
+Walking coverage,cov_by_area,QUEENSTOWN,Straight-line Coverage %,0.979414794,97.9%,
+Walking coverage,cov_by_area,MARINE PARADE,Walk Coverage %,0.8244518113,82.4%,
+Walking coverage,cov_by_area,MARINE PARADE,Straight-line Coverage %,0.9923941238,99.2%,
+Walking coverage,cov_by_area,HOUGANG,Walk Coverage %,0.8245557521,82.5%,
+Walking coverage,cov_by_area,HOUGANG,Straight-line Coverage %,0.983047465,98.3%,
+Walking coverage,cov_by_area,SENGKANG,Walk Coverage %,0.8329620502,83.3%,
+Walking coverage,cov_by_area,SENGKANG,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,KALLANG,Walk Coverage %,0.8418678038,84.2%,
+Walking coverage,cov_by_area,KALLANG,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,PUNGGOL,Walk Coverage %,0.8492227175,84.9%,
+Walking coverage,cov_by_area,PUNGGOL,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,YISHUN,Walk Coverage %,0.8493443031,84.9%,
+Walking coverage,cov_by_area,YISHUN,Straight-line Coverage %,0.998034387,99.8%,
+Walking coverage,cov_by_area,BUKIT BATOK,Walk Coverage %,0.8605178798,86.1%,
+Walking coverage,cov_by_area,BUKIT BATOK,Straight-line Coverage %,0.9968664054,99.7%,
+Walking coverage,cov_by_area,ROCHOR,Walk Coverage %,0.8886642463,88.9%,
+Walking coverage,cov_by_area,ROCHOR,Straight-line Coverage %,0.9939830308,99.4%,
+Walking coverage,cov_by_area,JURONG WEST,Walk Coverage %,0.9085758629,90.9%,
+Walking coverage,cov_by_area,JURONG WEST,Straight-line Coverage %,0.999959082,100.0%,
+Walking coverage,cov_by_area,CHOA CHU KANG,Walk Coverage %,0.9195389389,92.0%,
+Walking coverage,cov_by_area,CHOA CHU KANG,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,BUKIT MERAH,Walk Coverage %,0.920307838,92.0%,
+Walking coverage,cov_by_area,BUKIT MERAH,Straight-line Coverage %,0.996257732,99.6%,
+Walking coverage,cov_by_area,OUTRAM,Walk Coverage %,0.9348971755,93.5%,
+Walking coverage,cov_by_area,OUTRAM,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,CHANGI,Walk Coverage %,0.9707484694,97.1%,
+Walking coverage,cov_by_area,CHANGI,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,DOWNTOWN CORE,Walk Coverage %,1,100.0%,
+Walking coverage,cov_by_area,DOWNTOWN CORE,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,MUSEUM,Walk Coverage %,1,100.0%,
+Walking coverage,cov_by_area,MUSEUM,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_by_area,ORCHARD,Walk Coverage %,1,100.0%,
+Walking coverage,cov_by_area,ORCHARD,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_cards,,Walk Coverage %,0.7965618025,79.7%,
+Walking coverage,cov_cards,,Straight-line Coverage %,0.98460521,98.5%,
+Walking coverage,cov_cards,,Total Residents,4199590,"4,199,590",
+Walking coverage,cov_table,TAMPINES | EAST REGION,Total Residents,290090,"290,090",
+Walking coverage,cov_table,TAMPINES | EAST REGION,Walk Coverage %,0.7114895619,71.1%,
+Walking coverage,cov_table,TAMPINES | EAST REGION,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_table,BEDOK | EAST REGION,Total Residents,274360,"274,360",
+Walking coverage,cov_table,BEDOK | EAST REGION,Walk Coverage %,0.7045608179,70.5%,
+Walking coverage,cov_table,BEDOK | EAST REGION,Straight-line Coverage %,0.9990347317,99.9%,
+Walking coverage,cov_table,SENGKANG | NORTH-EAST REGION,Total Residents,267590,"267,590",
+Walking coverage,cov_table,SENGKANG | NORTH-EAST REGION,Walk Coverage %,0.8329620502,83.3%,
+Walking coverage,cov_table,SENGKANG | NORTH-EAST REGION,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_table,WOODLANDS | NORTH REGION,Total Residents,254410,"254,410",
+Walking coverage,cov_table,WOODLANDS | NORTH REGION,Walk Coverage %,0.7939533234,79.4%,
+Walking coverage,cov_table,WOODLANDS | NORTH REGION,Straight-line Coverage %,0.9834747219,98.3%,
+Walking coverage,cov_table,JURONG WEST | WEST REGION,Total Residents,253800,"253,800",
+Walking coverage,cov_table,JURONG WEST | WEST REGION,Walk Coverage %,0.9085758629,90.9%,
+Walking coverage,cov_table,JURONG WEST | WEST REGION,Straight-line Coverage %,0.999959082,100.0%,
+Walking coverage,cov_table,YISHUN | NORTH REGION,Total Residents,228720,"228,720",
+Walking coverage,cov_table,YISHUN | NORTH REGION,Walk Coverage %,0.8493443031,84.9%,
+Walking coverage,cov_table,YISHUN | NORTH REGION,Straight-line Coverage %,0.998034387,99.8%,
+Walking coverage,cov_table,HOUGANG | NORTH-EAST REGION,Total Residents,227220,"227,220",
+Walking coverage,cov_table,HOUGANG | NORTH-EAST REGION,Walk Coverage %,0.8245557521,82.5%,
+Walking coverage,cov_table,HOUGANG | NORTH-EAST REGION,Straight-line Coverage %,0.983047465,98.3%,
+Walking coverage,cov_table,PUNGGOL | NORTH-EAST REGION,Total Residents,204160,"204,160",
+Walking coverage,cov_table,PUNGGOL | NORTH-EAST REGION,Walk Coverage %,0.8492227175,84.9%,
+Walking coverage,cov_table,PUNGGOL | NORTH-EAST REGION,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_table,CHOA CHU KANG | WEST REGION,Total Residents,187550,"187,550",
+Walking coverage,cov_table,CHOA CHU KANG | WEST REGION,Walk Coverage %,0.9195389389,92.0%,
+Walking coverage,cov_table,CHOA CHU KANG | WEST REGION,Straight-line Coverage %,1,100.0%,
+Walking coverage,cov_table,BUKIT BATOK | WEST REGION,Total Residents,165830,"165,830",
+Walking coverage,cov_table,BUKIT BATOK | WEST REGION,Walk Coverage %,0.8605178798,86.1%,
+Walking coverage,cov_table,BUKIT BATOK | WEST REGION,Straight-line Coverage %,0.9968664054,99.7%,

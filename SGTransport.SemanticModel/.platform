@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SGTransport"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f23573c1-5d7d-4850-9287-b91526a8661e"
+  }
+}

@@ -1,0 +1,68 @@
+/// Residents (SingStat GHS 2025, placed on URA housing parcels) within 400 m of a bus stop, per planning
+/// area, measured three ways in sg-bus-network-monitor. Straight-line reach is an upper bound and the
+/// OpenStreetMap walking network a lower bound.
+table FactPACoverage
+
+	measure 'Total Residents' = SUM(FactPACoverage[Residents])
+		formatString: #,##0
+
+	/// Share of residents within a 400 m walk along the OpenStreetMap network, weighted by residents.
+	measure 'Walk Coverage %' = DIVIDE(SUM(FactPACoverage[CoveredWalk400m]), [Total Residents])
+		formatString: 0.0%
+
+	/// Share of residents within 400 m of a stop in a straight line, weighted by residents.
+	measure 'Straight-line Coverage %' = DIVIDE(SUM(FactPACoverage[CoveredLine400m]), [Total Residents])
+		formatString: 0.0%
+
+	column PlanningArea
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: PlanningArea
+
+	column Residents
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		summarizeBy: sum
+		sourceColumn: Residents
+
+	column CoveredLine400m
+		dataType: double
+		isHidden
+		summarizeBy: sum
+		sourceColumn: CoveredLine400m
+
+	column CoveredLine308m
+		dataType: double
+		isHidden
+		summarizeBy: sum
+		sourceColumn: CoveredLine308m
+
+	column CoveredWalk400m
+		dataType: double
+		isHidden
+		summarizeBy: sum
+		sourceColumn: CoveredWalk400m
+
+	partition FactPACoverage = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_pa_coverage.csv") else File.Contents(DataFolder & "fact_pa_coverage.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{
+							{"PlanningArea", type text}, {"Residents", Int64.Type}, {"CoveredLine400m", type number},
+							{"CoveredLine308m", type number}, {"CoveredWalk400m", type number}
+						},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

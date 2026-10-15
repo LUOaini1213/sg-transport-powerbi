@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cov_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 1000,
+    "height": 120,
+    "width": 1240,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPACoverage"
+                    }
+                  },
+                  "Property": "Walk Coverage %"
+                }
+              },
+              "queryRef": "FactPACoverage.Walk Coverage %",
+              "nativeQueryRef": "Walk Coverage %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPACoverage"
+                    }
+                  },
+                  "Property": "Straight-line Coverage %"
+                }
+              },
+              "queryRef": "FactPACoverage.Straight-line Coverage %",
+              "nativeQueryRef": "Straight-line Coverage %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPACoverage"
+                    }
+                  },
+                  "Property": "Total Residents"
+                }
+              },
+              "queryRef": "FactPACoverage.Total Residents",
+              "nativeQueryRef": "Total Residents"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Planning areas with residents'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/// URA Master Plan 2019 planning areas, plus two placeholder rows for stops that cannot be placed:
+/// OUTSIDE SINGAPORE (cross-border terminals) and STOP NOT IN SEPT 2026 LIST.
+table DimPlanningArea
+
+	column PlanningArea
+		dataType: string
+		isKey
+		summarizeBy: none
+		sourceColumn: PlanningArea
+
+	column Region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Region
+
+	partition DimPlanningArea = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_planning_area.csv") else File.Contents(DataFolder & "dim_planning_area.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"PlanningArea", type text}, {"Region", type text}}, "en-US")
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

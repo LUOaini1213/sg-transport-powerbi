@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "spd_links",
+  "position": {
+    "x": 660,
+    "y": 220,
+    "z": 4000,
+    "height": 480,
+    "width": 600,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCorridorLink"
+                    }
+                  },
+                  "Property": "LinkName"
+                }
+              },
+              "queryRef": "DimCorridorLink.LinkName",
+              "nativeQueryRef": "LinkName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCorridorLink"
+                    }
+                  },
+                  "Property": "Services"
+                }
+              },
+              "queryRef": "DimCorridorLink.Services",
+              "nativeQueryRef": "Services"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCorridorLink"
+                    }
+                  },
+                  "Property": "AMPeakBusesPerHour"
+                }
+              },
+              "queryRef": "DimCorridorLink.AMPeakBusesPerHour",
+              "nativeQueryRef": "AMPeakBusesPerHour"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "AM Peak Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.AM Peak Speed (km/h)",
+              "nativeQueryRef": "AM Peak Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "Night Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.Night Speed (km/h)",
+              "nativeQueryRef": "Night Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "AM Peak / Night Speed"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.AM Peak / Night Speed",
+              "nativeQueryRef": "AM Peak / Night Speed"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactLinkHourSpeed"
+                  }
+                },
+                "Property": "AM Peak / Night Speed"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Links, slowest AM peak relative to night first'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

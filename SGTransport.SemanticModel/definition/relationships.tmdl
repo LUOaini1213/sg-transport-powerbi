@@ -1,0 +1,28 @@
+relationship 6a838e2e-0578-4597-ae1e-e97d7451e763
+	fromColumn: FactStopRidership.MonthStart
+	toColumn: DimDate.Date
+
+relationship b6bc443d-8226-4358-b8e3-da47a41a9e03
+	fromColumn: FactStopRidership.StopCode
+	toColumn: DimStop.StopCode
+
+relationship bc85a9be-df47-4245-b4cb-409d6c097acf
+	fromColumn: DimStop.PlanningArea
+	toColumn: DimPlanningArea.PlanningArea
+
+relationship 432fe5a1-b93b-457e-8b2c-58e3e17a2e06
+	fromColumn: FactLinkHourSpeed.Date
+	toColumn: DimDate.Date
+
+relationship eb0c58c0-9765-497d-b570-ea096cb07228
+	fromColumn: FactLinkHourSpeed.LinkKey
+	toColumn: DimCorridorLink.LinkKey
+
+relationship bc5e5f1b-a23c-4ac7-9a2d-345aea6f52e3
+	fromColumn: DimCorridorLink.FromStop
+	toColumn: DimStop.StopCode
+
+relationship d0e541a9-b259-4dd2-a88d-dbd61ec549e4
+	fromColumn: FactPACoverage.PlanningArea
+	toColumn: DimPlanningArea.PlanningArea
+

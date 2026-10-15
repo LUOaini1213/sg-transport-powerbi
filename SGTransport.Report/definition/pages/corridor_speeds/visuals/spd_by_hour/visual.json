@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "spd_by_hour",
+  "position": {
+    "x": 20,
+    "y": 220,
+    "z": 3000,
+    "height": 480,
+    "width": 620,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "Hour"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.Hour",
+              "nativeQueryRef": "Hour",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "Mean Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.Mean Speed (km/h)",
+              "nativeQueryRef": "Mean Speed (km/h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactLinkHourSpeed"
+                    }
+                  },
+                  "Property": "P15 Link-Hour Speed (km/h)"
+                }
+              },
+              "queryRef": "FactLinkHourSpeed.P15 Link-Hour Speed (km/h)",
+              "nativeQueryRef": "P15 Link-Hour Speed (km/h)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactLinkHourSpeed"
+                  }
+                },
+                "Property": "Hour"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Speed by hour of day (km/h)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+/// Folder or URL that holds the CSV extracts, ending with a slash. The default reads the files committed
+/// to GitHub. For a local clone, set it to the data folder, e.g. C:\src\sg-transport-powerbi\data\
+expression DataFolder = "https://raw.githubusercontent.com/LUOaini1213/sg-transport-powerbi/main/data/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+	annotation PBI_ResultType = Text
+

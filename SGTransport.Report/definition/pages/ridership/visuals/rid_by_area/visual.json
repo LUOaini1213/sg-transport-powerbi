@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "rid_by_area",
+  "position": {
+    "x": 860,
+    "y": 220,
+    "z": 5000,
+    "height": 480,
+    "width": 400,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlanningArea"
+                    }
+                  },
+                  "Property": "PlanningArea"
+                }
+              },
+              "queryRef": "DimPlanningArea.PlanningArea",
+              "nativeQueryRef": "PlanningArea",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekday Boardings"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekday Boardings",
+              "nativeQueryRef": "Avg Weekday Boardings"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactStopRidership"
+                  }
+                },
+                "Property": "Avg Weekday Boardings"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Boardings per weekday by planning area'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

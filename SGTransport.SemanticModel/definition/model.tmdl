@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DataFolder","DimDate","DimPlanningArea","DimStop","DimCorridorLink","FactStopRidership","FactLinkHourSpeed","FactPACoverage"]
+
+ref table DimDate
+ref table DimPlanningArea
+ref table DimStop
+ref table DimCorridorLink
+ref table FactStopRidership
+ref table FactLinkHourSpeed
+ref table FactPACoverage
+

@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "rid_cards",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 2000,
+    "height": 120,
+    "width": 1240,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekday Boardings"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekday Boardings",
+              "nativeQueryRef": "Avg Weekday Boardings"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekday Boardings MoM %"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekday Boardings MoM %",
+              "nativeQueryRef": "Avg Weekday Boardings MoM %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Weekday Boardings"
+                }
+              },
+              "queryRef": "FactStopRidership.Weekday Boardings",
+              "nativeQueryRef": "Weekday Boardings"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Weekday Boardings MoM %"
+                }
+              },
+              "queryRef": "FactStopRidership.Weekday Boardings MoM %",
+              "nativeQueryRef": "Weekday Boardings MoM %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekend/Holiday Boardings"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekend/Holiday Boardings",
+              "nativeQueryRef": "Avg Weekend/Holiday Boardings"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Selected month'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

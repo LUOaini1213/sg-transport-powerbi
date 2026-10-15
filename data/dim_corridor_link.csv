@@ -1,0 +1,304 @@
+LinkKey,FromStop,ToStop,LinkName,RoadName,Services,AMPeakBusesPerHour,LinkKm
+01039-01029,01039,01029,Nth Bridge Rd: Bugis Cube to Opp Natl Lib,Nth Bridge Rd,12,58.31,0.2
+01121-01211,01121,01211,Victoria St: Aft Victoria Ln to Opp Blk 461,Victoria St,13,69.35,0.3
+01139-01039,01139,01039,Nth Bridge Rd: Bugis Stn/Parkview Sq to Bugis Cube,Nth Bridge Rd,12,58.31,0.3
+01211-01311,01211,01311,Victoria St: Opp Blk 461 to Lavender Stn Exit B,Victoria St,15,77.63,0.3
+01229-01139,01229,01139,Nth Bridge Rd: Bef Sultan Mque to Bugis Stn/Parkview Sq,Nth Bridge Rd,10,49.64,0.4
+01329-01229,01329,01229,Nth Bridge Rd: Blk 8 to Bef Sultan Mque,Nth Bridge Rd,10,49.64,0.5
+02161-02171,02161,02171,Temasek Ave: Aft Promenade Stn Exit C to Opp The Ritz-Carlton,Temasek Ave,22,47.55,0.3
+03011-02111,03011,02111,Fullerton Rd: Fullerton Sq to Esplanade Bridge,Fullerton Rd,18,46.47,0.6
+03019-03059,03019,03059,Collyer Quay: OUE Bayfront to One Raffles Quay,Collyer Quay,22,134.55,0.3
+03059-03129,03059,03129,Raffles Quay: One Raffles Quay to UIC Bldg,Raffles Quay,24,143.31,0.4
+03071-03031,03071,03031,Robinson Rd: 80 Robinson Rd to Raffles Pl Stn Exit F,Robinson Rd,13,10.8,0.3
+03111-03071,03111,03071,Robinson Rd: Aft Capital Twr to 80 Robinson Rd,Robinson Rd,33,105.96,0.3
+03129-03217,03129,03217,Shenton Way: UIC Bldg to Aft Straits Blvd,Shenton Way,19,42.84,0.3
+03129-03218,03129,03218,Shenton Way: UIC Bldg to Prince Edward Rd Stn Exit 2,Shenton Way,33,139.21,0.5
+03222-03111,03222,03111,Anson Rd: Hub Synergy Pt to Aft Capital Twr,Anson Rd,17,57.56,0.7
+03223-03151,03223,03151,Anson Rd: Tanjong Pagar Stn Exit C to Aft Telok Ayer St,Anson Rd,12,48.57,0.4
+03241-03111,03241,03111,Anson Rd: Aft Enggor St to Aft Capital Twr,Anson Rd,20,71.14,0.5
+03381-03391,03381,03391,Marina Blvd: The Sail to Marina Bay Financial Ctr,Marina Blvd,27,123.16,0.2
+03501-02169,03501,02169,Bayfront Ave: Marina Bay Sands Theatre to Promenade Stn Exit B,Bayfront Ave,11,58.71,0.9
+03509-03519,03509,03519,Bayfront Ave: Bayfront Stn Exit B/MBS to Bayfront Stn Exit A,Bayfront Ave,17,28.37,0.3
+03511-03501,03511,03501,Bayfront Ave: Aft Bayfront Stn Exit E to Marina Bay Sands Theatre,Bayfront Ave,13,68.93,0.4
+03539-03529,03539,03529,Central Blvd: Marina Bay Stn to Downtown Stn Exit E,Central Blvd,28,39.74,0.4
+04121-08041,04121,08041,Stamford Rd: SMU to YMCA,Stamford Rd,29,91.87,0.3
+04179-02049,04179,02049,Bras Basah Rd: Aft Bras Basah Stn Exit A to Raffles Hotel,Bras Basah Rd,28,136.22,0.4
+04249-05029,04249,05029,Nth Bridge Rd: Opp The Treasury to Boat Quay,Nth Bridge Rd,14,77.12,0.4
+05013-05023,05013,05023,Eu Tong Sen St: Chinatown Stn Exit C to Opp Hong Lim Pk,Eu Tong Sen St,10,49.92,0.4
+05019-05069,05019,05069,New Bridge Rd: Aft Duxton Plain Pk to Outram Pk Stn Exit 4,New Bridge Rd,10,64.58,0.1
+05023-04222,05023,04222,Eu Tong Sen St: Opp Hong Lim Pk to Clarke Quay Stn Exit E,Eu Tong Sen St,13,59.77,0.3
+05039-05019,05039,05019,New Bridge Rd: New Bridge Ctr to Aft Duxton Plain Pk,New Bridge Rd,16,91.07,0.3
+05069-10011,05069,10011,New Bridge Rd: Outram Pk Stn Exit 4 to Bef Neil Rd,New Bridge Rd,10,64.58,0.4
+07319-07419,07319,07419,Jln Besar: Aft Allenby Rd to Opp Veerasamy Rd,Jln Besar,10,57.48,0.5
+07329-07319,07329,07319,Jln Besar: Hoa Nam Bldg to Aft Allenby Rd,Jln Besar,10,57.48,0.3
+07369-07379,07369,07379,Lavender St: Aft Kallang Bahru to Aperia/Bef Kallang Rd,Lavender St,11,63.42,0.2
+08031-08111,08031,08111,Penang Rd: Dhoby Ghaut Stn Exit B to Winsland Hse,Penang Rd,26,112.54,0.5
+08041-08031,08041,08031,Orchard Rd: YMCA to Dhoby Ghaut Stn Exit B,Orchard Rd,34,112.54,0.3
+08057-08069,08057,08069,Orchard Rd: Dhoby Ghaut Stn to Bencoolen Stn Exit B,Orchard Rd,28,162.41,0.5
+08069-04179,08069,04179,Bras Basah Rd: Bencoolen Stn Exit B to Aft Bras Basah Stn Exit A,Bras Basah Rd,26,126.84,0.3
+08111-08121,08111,08121,Penang Rd: Winsland Hse to Somerset Stn,Penang Rd,28,122.34,0.3
+08138-08057,08138,08057,Orchard Rd: Concorde Hotel S'pore to Dhoby Ghaut Stn,Orchard Rd,25,122.62,0.4
+09038-08138,09038,08138,Orchard Rd: Opp Somerset Stn to Concorde Hotel S'pore,Orchard Rd,12,46.58,0.4
+09047-09037,09047,09037,Orchard Rd: Orchard Stn/Tang Plaza to Bef Cairnhill Rd,Orchard Rd,15,86.75,0.5
+09048-09038,09048,09038,Orchard Rd: Orchard Stn/Lucky Plaza to Opp Somerset Stn,Orchard Rd,13,51.38,0.6
+09059-09022,09059,09022,Grange Rd: Somerset Youth Pk to Orchard Stn Exit 13,Grange Rd,16,69.47,0.5
+09159-09169,09159,09169,Tanglin Rd: Aft Tomlinson Rd to Delfi Orchard,Tanglin Rd,12,63.76,0.3
+09169-09179,09169,09179,Orchard Rd: Delfi Orchard to Royal Thai Embassy,Orchard Rd,14,70.29,0.3
+10011-10041,10011,10041,New Bridge Rd: Bef Neil Rd to Bef Kampong Bahru Ter,New Bridge Rd,11,73.18,0.3
+10049-10017,10049,10017,Kg Bahru Rd: Opp Kampong Bahru Ter to Aft Hosp Dr,Kg Bahru Rd,16,86.4,0.4
+10101-10111,10101,10111,Jln Bt Merah: Opp Bt Merah Sec Sch to Opp Blk 28,Jln Bt Merah,10,53.7,0.5
+10111-10131,10111,10131,Jln Bt Merah: Opp Blk 28 to Opp Blk 2,Jln Bt Merah,10,53.7,0.3
+10139-10119,10139,10119,Jln Bt Merah: Blk 1 to Opp Pacific Tech Ctr,Jln Bt Merah,10,58.48,0.3
+10141-10151,10141,10151,Tiong Bahru Rd: Blk 18 to Ctrl Green Condo,Tiong Bahru Rd,11,49.16,0.4
+10151-10161,10151,10161,Tiong Bahru Rd: Ctrl Green Condo to Opp Tiong Bahru Stn/Plaza,Tiong Bahru Rd,12,56.66,0.2
+10169-10149,10169,10149,Tiong Bahru Rd: Tiong Bahru Stn/Plaza to Blk 1,Tiong Bahru Rd,11,47.89,0.6
+11019-10139,11019,10139,Jln Bt Merah: Alexandra Ctrl to Blk 1,Jln Bt Merah,10,58.48,0.3
+11021-11031,11021,11031,Queensway: Aft Queenstown NPC HQ to Opp Queen's Cl,Queensway,12,65.62,0.3
+11039-11029,11039,11029,Queensway: Blk 19 to Blk 166/Aft Mei Chin Rd,Queensway,12,73.77,0.4
+11049-11039,11049,11039,Queensway: Opp Blessed Sacrament Ch to Blk 19,Queensway,12,73.77,0.4
+11059-11049,11059,11049,Queensway: Queenstown Polyclinic to Opp Blessed Sacrament Ch,Queensway,12,73.77,0.4
+11179-11169,11179,11169,C'wealth Ave: Blk 8 to C'wealth Stn Exit B/C,C'wealth Ave,10,64.65,0.6
+11369-18149,11369,18149,Nth Buona Vista Rd: Buona Vista Stn Exit D to Essec Business Sch,Nth Buona Vista Rd,11,55.42,0.6
+14121-14131,14121,14131,Telok Blangah Rd: Opp HarbourFront Int to Caribbean at Keppel Bay,Telok Blangah Rd,10,62.04,0.4
+14129-14119,14129,14119,Telok Blangah Rd: HarbourFront Stn Exit A to Opp VivoCity,Telok Blangah Rd,16,84.87,0.3
+14131-14151,14131,14151,Telok Blangah Rd: Caribbean at Keppel Bay to Opp Hotel Faber Pk,Telok Blangah Rd,14,84.66,0.5
+14139-14129,14139,14129,Telok Blangah Rd: Bef Seah Im Rd to HarbourFront Stn Exit A,Telok Blangah Rd,10,60.26,0.5
+14141-14121,14141,14121,Telok Blangah Rd: HarbourFront Stn/Vivocity to Opp HarbourFront Int,Telok Blangah Rd,12,67.04,0.3
+14159-14139,14159,14139,Telok Blangah Rd: Hotel Faber Pk to Bef Seah Im Rd,Telok Blangah Rd,14,87.33,0.4
+14161-14171,14161,14171,Telok Blangah Rd: Telok Blangah Stn to Opp Yeo's Bldg,Telok Blangah Rd,13,72.94,0.4
+14169-14159,14169,14159,Telok Blangah Rd: Opp Telok Blangah Stn to Hotel Faber Pk,Telok Blangah Rd,11,66.46,0.5
+14179-14169,14179,14169,Telok Blangah Rd: Yeo's Bldg to Opp Telok Blangah Stn,Telok Blangah Rd,13,78.24,0.4
+14189-14179,14189,14179,Telok Blangah Rd: Aft Alexandra Rd to Yeo's Bldg,Telok Blangah Rd,13,78.24,0.3
+15041-15051,15041,15051,Alexandra Rd: Alexandra Retail Ctr to Alexandra Pt,Alexandra Rd,12,51.84,0.3
+15059-15049,15059,15049,Alexandra Rd: Opp Alexandra Pt to Opp Alexandra Retail Ctr,Alexandra Rd,12,63.32,0.3
+17151-17161,17151,17161,C'wealth Ave West: Blk 410 to Blk 455,C'wealth Ave West,12,64.49,0.3
+17161-17171,17161,17171,C'wealth Ave West: Blk 455 to Clementi Stn Exit A/Mall,C'wealth Ave West,18,106.27,0.4
+17189-17179,17189,17179,C'wealth Ave West: Blk 317 to Clementi Stn Exit B,C'wealth Ave West,11,69.99,0.3
+20271-28221,20271,28221,Jurong Town Hall Rd: Opp German Ctr to Opp Intl Business Pk,Jurong Town Hall Rd,10,54.05,0.3
+28019-20109,28019,20109,C'wealth Ave West: Aft Toh Tuck Ave to Aft Clementi Fire Stn,C'wealth Ave West,10,64.92,0.6
+28211-28009,28211,28009,Jurong Gateway Rd: Bef Jurong East Stn to Jurong East Int,Jurong Gateway Rd,11,60.13,0.2
+28249-28239,28249,28239,Jurong Town Hall Rd: Jurong East Lib to Jurong Town Hall Int,Jurong Town Hall Rd,11,53.22,0.5
+28281-28291,28281,28291,Jurong Town Hall Rd: Opp Blk 227 to Blk 303,Jurong Town Hall Rd,11,55.29,0.3
+28291-43459,28291,43459,Jurong Town Hall Rd: Blk 303 to Aft PIE,Jurong Town Hall Rd,12,61.6,0.5
+28299-28289,28299,28289,Jurong Town Hall Rd: Blk 253 to Blk 228,Jurong Town Hall Rd,10,57.49,0.3
+28451-28461,28451,28461,Jurong East Ave 1: Parc Oasis to Blk 347,Jurong East Ave 1,11,60.1,0.4
+28461-28491,28461,28491,Jurong East Ave 1: Blk 347 to Opp Jurong Polyclinic,Jurong East Ave 1,10,52.6,0.5
+28499-28469,28499,28469,Jurong East Ave 1: Jurong Polyclinic to Blk 316,Jurong East Ave 1,11,62.4,0.4
+28501-28511,28501,28511,Jurong West Ave 1: Blk 490 to Blk 463,Jurong West Ave 1,11,54.67,0.4
+28509-28499,28509,28499,Jurong West Ave 1: Blk 422 to Jurong Polyclinic,Jurong West Ave 1,11,62.4,0.5
+28511-28521,28511,28521,Jurong West Ave 1: Blk 463 to Blk 457,Jurong West Ave 1,11,54.67,0.3
+28519-28509,28519,28509,Jurong West Ave 1: Blk 425 to Blk 422,Jurong West Ave 1,10,54.4,0.2
+28529-28519,28529,28519,Jurong West Ave 1: Blk 441 to Blk 425,Jurong West Ave 1,11,62.4,0.5
+28631-28641,28631,28641,Toh Guan Rd: Opp Blk 288D to Blk 284,Toh Guan Rd,13,63.45,0.3
+28649-28639,28649,28639,Toh Guan Rd: Blk 286A to Blk 288E,Toh Guan Rd,10,45.1,0.3
+41031-41041,41031,41041,Bt Timah Rd: Bef Crown Ctr to Coronation Plaza,Bt Timah Rd,11,56.75,0.2
+41041-41051,41041,41051,Bt Timah Rd: Coronation Plaza to Tan Kah Kee Stn,Bt Timah Rd,11,56.75,0.4
+41051-41061,41051,41061,Bt Timah Rd: Tan Kah Kee Stn to Chinese High Sch,Bt Timah Rd,11,56.75,0.2
+41061-41071,41061,41071,Bt Timah Rd: Chinese High Sch to Opp Natl JC,Bt Timah Rd,11,56.75,0.4
+41069-41049,41069,41049,Dunearn Rd: Opp Tan Kah Kee Stn to Opp Coronation Plaza,Dunearn Rd,11,62.44,0.4
+41071-41081,41071,41081,Bt Timah Rd: Opp Natl JC to Sixth Ave Stn,Bt Timah Rd,11,56.75,0.6
+41079-41069,41079,41069,Dunearn Rd: Natl JC to Opp Tan Kah Kee Stn,Dunearn Rd,11,62.44,0.6
+41081-42011,41081,42011,Bt Timah Rd: Sixth Ave Stn to Sixth Ave Ctr,Bt Timah Rd,10,52.75,0.3
+41089-41079,41089,41079,Dunearn Rd: Aft Jln Naga Sari to Natl JC,Dunearn Rd,11,62.44,0.4
+42011-42021,42011,42021,Bt Timah Rd: Sixth Ave Ctr to Aft Maple Ave,Bt Timah Rd,12,60.88,0.3
+42019-41089,42019,41089,Dunearn Rd: Opp Sixth Ave Stn to Aft Jln Naga Sari,Dunearn Rd,11,62.44,0.4
+42021-42031,42021,42031,Bt Timah Rd: Aft Maple Ave to The Tessarina,Bt Timah Rd,12,60.88,0.3
+42029-42019,42029,42019,Dunearn Rd: Aft Swiss Club Rd to Opp Sixth Ave Stn,Dunearn Rd,10,58.57,0.5
+42031-42041,42031,42041,Bt Timah Rd: The Tessarina to The Nexus,Bt Timah Rd,12,60.88,0.4
+42039-42029,42039,42029,Dunearn Rd: Opp The Nexus to Aft Swiss Club Rd,Dunearn Rd,12,67.98,0.5
+42041-42051,42041,42051,Bt Timah Rd: The Nexus to King Albert Pk Stn,Bt Timah Rd,12,60.88,0.5
+42049-42039,42049,42039,Dunearn Rd: Hua Guan Gdns to Opp The Nexus,Dunearn Rd,12,67.98,0.4
+42051-42061,42051,42061,Bt Timah Rd: King Albert Pk Stn to King Albert Pk,Bt Timah Rd,12,60.88,0.3
+42059-42049,42059,42049,Dunearn Rd: Opp King Albert Pk Stn to Hua Guan Gdns,Dunearn Rd,12,67.98,0.2
+42151-42161,42151,42161,Jln Jurong Kechil: Beauty World Stn Exit C to Blk 18,Jln Jurong Kechil,11,52.08,0.3
+42169-42159,42169,42159,Jln Jurong Kechil: Opp Blk 19 to Opp Beauty World Stn,Jln Jurong Kechil,11,60.88,0.2
+43061-43071,43061,43071,Upp Bt Timah Rd: Hillview Stn Exit B to Opp Dairy Farm Rd,Upp Bt Timah Rd,10,53.08,0.2
+43071-43081,43071,43081,Upp Bt Timah Rd: Opp Dairy Farm Rd to Opp St. Joseph's Ch (Bt Timah),Upp Bt Timah Rd,10,53.08,0.2
+43099-43089,43099,43089,Upp Bt Timah Rd: Assumption Eng Sch to St. Joseph's Ch (Bt Timah),Upp Bt Timah Rd,10,60.23,0.3
+43179-43189,43179,43189,Bt Batok East Ave 3: Blk 231 to Blk 283,Bt Batok East Ave 3,13,73.71,0.4
+43453-28299,43453,28299,Bt Batok Rd: Bef PIE to Blk 253,Bt Batok Rd,11,62.95,0.4
+44051-43991,44051,43991,Woodlands Rd: Opp Blk 632 CP to Opp Blk 635A,Woodlands Rd,10,59.12,0.2
+44069-44059,44069,44059,Woodlands Rd: Blk 634 CP to Blk 632 CP,Woodlands Rd,11,65.01,0.2
+44131-44141,44131,44141,Choa Chu Kang Rd: Blk 26 to Phoenix Stn,Choa Chu Kang Rd,10,60.02,0.3
+44259-44149,44259,44149,Bt Panjang Rd: Blk 183 to Opp Phoenix Stn,Bt Panjang Rd,11,56.93,0.6
+46499-46521,46499,46521,Woodlands Ave 3: Opp Blk 402 to Marsiling Stn,Woodlands Ave 3,10,47.96,0.2
+46521-46531,46521,46531,Woodlands Ave 3: Marsiling Stn to Blk 173,Woodlands Ave 3,13,71.87,0.4
+46529-46491,46529,46491,Woodlands Ave 3: Opp Marsiling Stn to Blk 402,Woodlands Ave 3,12,61.71,0.3
+46531-46541,46531,46541,Woodlands Ave 3: Blk 173 to Marsiling Mall,Woodlands Ave 3,13,71.87,0.4
+46539-46529,46539,46529,Woodlands Ave 3: Blk 320 to Opp Marsiling Stn,Woodlands Ave 3,17,90.23,0.4
+46549-46539,46549,46539,Woodlands Ave 3: Blk 347 to Blk 320,Woodlands Ave 3,17,90.23,0.4
+50031-50041,50031,50041,Thomson Rd: Opp Novena Ch to Novena Lodge,Thomson Rd,12,59.47,0.3
+50041-50051,50041,50051,Thomson Rd: Novena Lodge to Thomson Med Ctr,Thomson Rd,10,46.84,0.2
+50051-51011,50051,51011,Thomson Rd: Thomson Med Ctr to Opp Tan Tong Meng Twr,Thomson Rd,10,46.84,0.3
+50059-50049,50059,50049,Thomson Rd: Opp Thomson Med Ctr to Opp Novena Lodge,Thomson Rd,13,69.01,0.2
+51091-51101,51091,51101,PIE: Opp Catholic JC to Bef Thomson Flyover,PIE,10,49.28,0.4
+52021-52031,52021,52031,Braddell Rd: Opp Blk 1004 to Opp Blk 998,Braddell Rd,10,54.16,0.3
+52069-52059,52069,52059,Braddell Rd: Opp BCA Acad to Blk 219,Braddell Rd,10,49.26,0.2
+52321-52501,52321,52501,Lor 6 Toa Payoh: Aft SAFRA Toa Payoh to Bef Toa Payoh Pk,Lor 6 Toa Payoh,12,85.51,0.3
+52509-52329,52509,52329,Lor 6 Toa Payoh: Aft HDB Hub to Aft Lor 4 Toa Payoh,Lor 6 Toa Payoh,14,88.64,0.3
+53039-53029,53039,53029,Upp Thomson Rd: Thomson CC to Shunfu Est,Upp Thomson Rd,10,51.04,0.3
+53041-53051,53041,53051,Upp Thomson Rd: Bef Thomson Ridge to Upp Thomson Stn Exit 5,Upp Thomson Rd,10,52.93,0.2
+53051-53061,53051,53061,Upp Thomson Rd: Upp Thomson Stn Exit 5 to Bef Windsor Pk Rd,Upp Thomson Rd,10,52.93,0.6
+53059-53049,53059,53049,Upp Thomson Rd: Upp Thomson Stn Exit 2 to Bef Jln Todak,Upp Thomson Rd,10,53.61,0.4
+54049-54039,54049,54039,Ang Mo Kio Ave 6: Courts Ang Mo Kio to Bef Al-Muttaqin Mque,Ang Mo Kio Ave 6,10,46.13,0.3
+54059-54049,54059,54049,Ang Mo Kio Ave 6: Bef Ang Mo Kio Lib to Courts Ang Mo Kio,Ang Mo Kio Ave 6,10,46.13,0.3
+54221-54231,54221,54231,Ang Mo Kio Ave 3: Opp Ang Mo Kio Pr Sch to Blk 129,Ang Mo Kio Ave 3,11,67.88,0.3
+54231-54241,54231,54241,Ang Mo Kio Ave 3: Blk 129 to Blk 700B,Ang Mo Kio Ave 3,10,60.82,0.5
+54239-54229,54239,54229,Ang Mo Kio Ave 3: Blk 209 to Ang Mo Kio Pr Sch,Ang Mo Kio Ave 3,11,55.54,0.4
+54261-54271,54261,54271,Ang Mo Kio Ave 3: Aft Ang Mo Kio Stn Exit A to Blk 586,Ang Mo Kio Ave 3,12,71.07,0.3
+54271-54281,54271,54281,Ang Mo Kio Ave 3: Blk 586 to Blk 570,Ang Mo Kio Ave 3,13,78.13,0.3
+54279-54269,54279,54269,Ang Mo Kio Ave 3: Blk 427 to Opp Ang Mo Kio Stn,Ang Mo Kio Ave 3,10,71.31,0.3
+54289-54279,54289,54279,Ang Mo Kio Ave 3: Blk 452 to Blk 427,Ang Mo Kio Ave 3,11,71.31,0.3
+54291-54301,54291,54301,Ang Mo Kio Ave 3: Blk 564 to Blk 5022,Ang Mo Kio Ave 3,10,53.23,0.5
+55041-55051,55041,55051,Yio Chu Kang Rd: Aft AMK St 64/Apple SG to Opp ST Engineering,Yio Chu Kang Rd,11,50.07,0.4
+55051-55071,55051,55071,Yio Chu Kang Rd: Opp ST Engineering to Bef ECON Medicare Ctr,Yio Chu Kang Rd,11,50.07,0.4
+55071-55081,55071,55081,Yio Chu Kang Rd: Bef ECON Medicare Ctr to Opp Sunrise Gdns,Yio Chu Kang Rd,11,50.07,0.4
+55101-67011,55101,67011,Yio Chu Kang Rd: Opp Serenity Pk to Bef Begonia Rd,Yio Chu Kang Rd,10,43.64,0.3
+55179-55189,55179,55189,Ang Mo Kio Ave 6: Opp Castle Green to Yio Chu Kang Stn,Ang Mo Kio Ave 6,10,52.52,0.4
+57129-57119,57129,57119,Sembawang Rd: Blk 114 to Blk 101,Sembawang Rd,12,64.69,0.3
+58999-59059,58999,59059,Yishun Ave 2: Blk 936 CP to Blk 608,Yishun Ave 2,16,76.79,0.4
+59021-59031,59021,59031,Lentor Ave: Bef Yishun Ave 1 to Opp Yishun Sports Hall,Lentor Ave,13,71.41,0.4
+59031-59041,59031,59041,Yishun Ave 2: Opp Yishun Sports Hall to Bef Khatib Stn,Yishun Ave 2,17,82.98,0.4
+59039-59029,59039,59029,Yishun Ave 2: Yishun Sports Hall to Aft Yishun Ave 1,Yishun Ave 2,15,78.75,0.7
+59041-59051,59041,59051,Yishun Ave 2: Bef Khatib Stn to Blk 790,Yishun Ave 2,16,80.63,0.4
+59049-59039,59049,59039,Yishun Ave 2: Opp Khatib Stn to Yishun Sports Hall,Yishun Ave 2,19,94.42,0.4
+59059-59049,59059,59049,Yishun Ave 2: Blk 608 to Opp Khatib Stn,Yishun Ave 2,19,94.42,0.5
+59069-58999,59069,58999,Yishun Ave 2: Opp Blk 757 to Blk 936 CP,Yishun Ave 2,18,89.75,0.2
+59119-59149,59119,59149,Yishun Ave 5: Opp Blk 701A to Blk 145,Yishun Ave 5,10,55.19,0.5
+60089-52089,60089,52089,Jln Toa Payoh: Opp St. Andrew's Village to Opp Blk 195,Jln Toa Payoh,10,62.57,0.7
+60099-07329,60099,07329,Bendemeer Rd: Bef Lavender St to Hoa Nam Bldg,Bendemeer Rd,12,61.95,0.3
+60119-60099,60119,60099,Bendemeer Rd: Opp Boon Keng Stn to Bef Lavender St,Bendemeer Rd,10,55.35,0.5
+60121-60141,60121,60141,S'goon Rd: Boon Keng Stn/Blk 102 to Opp Bendemeer Pr Sch,S'goon Rd,10,62.13,0.4
+60139-60119,60139,60119,Bendemeer Rd: Blk 44 to Opp Boon Keng Stn,Bendemeer Rd,13,72.86,0.5
+60141-60161,60141,60161,S'goon Rd: Opp Bendemeer Pr Sch to St. Michael's Pl,S'goon Rd,11,66.26,0.3
+60159-60139,60159,60139,Bendemeer Rd: Blk 54 to Blk 44,Bendemeer Rd,13,72.86,0.3
+60179-60159,60179,60159,Bendemeer Rd: MOM Svcs Ctr to Blk 54,Bendemeer Rd,12,68.73,0.2
+60201-60261,60201,60261,Upp S'goon Rd: 18 Woodsville to Potong Pasir Stn Exit C,Upp S'goon Rd,10,44.39,0.2
+60269-60209,60269,60209,Upp S'goon Rd: Potong Pasir Stn Exit B to Sant Ritz,Upp S'goon Rd,11,52.16,0.1
+61031-61041,61031,61041,Upp S'goon Rd: Woodleigh Stn Exit B to Bef Braddell Rd,Upp S'goon Rd,10,52.56,0.3
+61049-61039,61049,61039,Upp S'goon Rd: Aft Bartley Rd to Woodleigh Stn Exit A,Upp S'goon Rd,12,57.66,0.4
+62019-70309,62019,70309,Upp Paya Lebar Rd: Aft Rochdale Rd to Opp Paya Lebar St,Upp Paya Lebar Rd,13,62.35,0.3
+62029-62019,62029,62019,Upp Paya Lebar Rd: Paya Lebar Gdns to Aft Rochdale Rd,Upp Paya Lebar Rd,13,62.35,0.2
+62039-62029,62039,62029,Upp Paya Lebar Rd: Raya Gdn to Paya Lebar Gdns,Upp Paya Lebar Rd,13,62.35,0.4
+62049-62039,62049,62039,Upp Paya Lebar Rd: Aft Paya Lebar Cres to Raya Gdn,Upp Paya Lebar Rd,13,62.35,0.2
+62059-62049,62059,62049,Upp Paya Lebar Rd: Blk 161 to Aft Paya Lebar Cres,Upp Paya Lebar Rd,11,53.78,0.4
+62111-62121,62111,62121,Upp S'goon Rd: Aft Sommerville Rd to Aft Wolskel Rd,Upp S'goon Rd,10,49.88,0.2
+62129-62119,62129,62119,Upp S'goon Rd: Blk 403 to Aft Sunshine Lodge,Upp S'goon Rd,12,57.64,0.3
+63031-63041,63031,63041,Upp S'goon Rd: Kovan Stn Exit B to Opp Glad Tidings Ch,Upp S'goon Rd,11,48.76,0.3
+63041-63051,63041,63051,Upp S'goon Rd: Opp Glad Tidings Ch to Opp Blk 370,Upp S'goon Rd,12,54.21,0.2
+63049-63039,63049,63039,Upp S'goon Rd: Glad Tidings Ch to Kovan Stn Exit C,Upp S'goon Rd,14,68.83,0.4
+63059-63049,63059,63049,Upp S'goon Rd: Blk 22 to Glad Tidings Ch,Upp S'goon Rd,14,68.83,0.4
+63061-64011,63061,64011,Upp S'goon Rd: Opp Blk 25 to Naung Residence,Upp S'goon Rd,10,51.57,0.2
+63179-63369,63179,63369,Yio Chu Kang Rd: Bef Tai Seng Chr Ch to S'goon Sports Cplx,Yio Chu Kang Rd,16,75.81,0.4
+63181-63191,63181,63191,Yio Chu Kang Rd: Bef St. Helier's Ave to Aft S'goon Nth Ave 1,Yio Chu Kang Rd,11,53.52,0.4
+63191-63201,63191,63201,Yio Chu Kang Rd: Aft S'goon Nth Ave 1 to Affinity At Serangoon,Yio Chu Kang Rd,12,58.74,0.2
+63199-63189,63199,63189,Yio Chu Kang Rd: Aft Phillips Ave to Aft S'goon Gdn Way,Yio Chu Kang Rd,15,67.81,0.3
+63201-63211,63201,63211,Yio Chu Kang Rd: Affinity At Serangoon to Blk 138,Yio Chu Kang Rd,12,58.74,0.3
+63209-63199,63209,63199,Yio Chu Kang Rd: Parkwood Residences to Aft Phillips Ave,Yio Chu Kang Rd,15,67.81,0.4
+63219-63209,63219,63209,Yio Chu Kang Rd: Bef Yio Chu Kang Chapel to Parkwood Residences,Yio Chu Kang Rd,17,73.03,0.3
+63361-63181,63361,63181,Yio Chu Kang Link: Opp S'goon Sports Cplx to Bef St. Helier's Ave,Yio Chu Kang Link,12,61.52,0.4
+63369-66379,63369,66379,Yio Chu Kang Link: S'goon Sports Cplx to Blk 206,Yio Chu Kang Link,11,48.55,0.4
+64041-64051,64041,64051,Upp S'goon Rd: The Midtown to Blk 465A,Upp S'goon Rd,13,49.69,0.4
+64059-64049,64059,64049,Upp S'goon Rd: Blk 355 to Opp The Midtown,Upp S'goon Rd,10,55.2,0.3
+64109-63219,64109,63219,Yio Chu Kang Rd: Gracehaven S Army to Bef Yio Chu Kang Chapel,Yio Chu Kang Rd,12,50.23,0.4
+64119-64109,64119,64109,Yio Chu Kang Rd: Blk 953 to Gracehaven S Army,Yio Chu Kang Rd,11,53.22,0.5
+64381-64391,64381,64391,Hougang Ave 10: Hougang Stn Exit C to Blk 831,Hougang Ave 10,12,65.51,0.3
+65221-65281,65221,65281,Punggol Ctrl: Blk 303D to Punggol Sec/Blk 601B,Punggol Ctrl,12,52.29,0.3
+65259-65409,65259,65409,Punggol Ctrl: Punggol Stn/Int to Bef Blk 264,Punggol Ctrl,11,46.99,0.3
+65271-65261,65271,65261,Punggol Ctrl: Bet Blks 622A/622B to Blk 649,Punggol Ctrl,10,33.07,0.6
+65289-65229,65289,65229,Punggol Ctrl: Opp Punggol Sec/Blk 195E to Blk 298,Punggol Ctrl,10,41.57,0.3
+67011-67021,67011,67021,Yio Chu Kang Rd: Bef Begonia Rd to Opp Dedap Rd,Yio Chu Kang Rd,10,43.64,0.3
+70259-81101,70259,81101,Paya Lebar Rd: MacPherson Stn Exit B to Paya Lebar Green,Paya Lebar Rd,11,59.65,0.4
+70261-70271,70261,70271,Paya Lebar Rd: Opp Orion @ Paya Lebar to Le Crescendo,Paya Lebar Rd,11,56.32,0.2
+70269-70259,70269,70259,Paya Lebar Rd: Citipoint Ind Cplx to MacPherson Stn Exit B,Paya Lebar Rd,10,49.54,0.5
+70271-70281,70271,70281,Paya Lebar Rd: Le Crescendo to Aft Tai Seng Stn,Paya Lebar Rd,11,54.81,0.6
+70279-70269,70279,70269,Paya Lebar Rd: Opp Trinity Paya Lebar to Citipoint Ind Cplx,Paya Lebar Rd,13,70.16,0.3
+70281-70291,70281,70291,Upp Paya Lebar Rd: Aft Tai Seng Stn to Asiawide Ind Bldg,Upp Paya Lebar Rd,12,68.38,0.3
+70289-70279,70289,70279,Upp Paya Lebar Rd: Aft Tai Seng Stn Exit C to Opp Trinity Paya Lebar,Upp Paya Lebar Rd,13,63.4,0.5
+70291-70301,70291,70301,Upp Paya Lebar Rd: Asiawide Ind Bldg to Aft Paya Lebar St,Upp Paya Lebar Rd,12,68.38,0.3
+70299-70289,70299,70289,Upp Paya Lebar Rd: Opp Asiawide Ind Bldg to Aft Tai Seng Stn Exit C,Upp Paya Lebar Rd,16,76.97,0.3
+70309-70299,70309,70299,Upp Paya Lebar Rd: Opp Paya Lebar St to Opp Asiawide Ind Bldg,Upp Paya Lebar Rd,16,76.97,0.2
+71091-72019,71091,72019,Eunos Link: Blk 637 to Opp Blk 322,Eunos Link,16,101.61,0.4
+72011-71099,72011,71099,Jln Eunos: Blk 322 to Blk 311,Jln Eunos,15,97.26,0.3
+72019-83119,72019,83119,Jln Eunos: Opp Blk 322 to Opp Blk 16,Jln Eunos,14,96.0,0.7
+74941-75061,74941,75061,Bedok Reservoir Rd: Opp Blk 961A to Blk 954D,Bedok Reservoir Rd,10,60.49,0.2
+74949-75349,74949,75349,Bedok Reservoir Rd: Blk 961A to The Clearwater Condo,Bedok Reservoir Rd,11,69.99,0.4
+75069-74949,75069,74949,Bedok Reservoir Rd: Blk 970A to Blk 961A,Bedok Reservoir Rd,10,65.99,0.2
+75229-75239,75229,75239,Tampines Ave 1: Temasek Poly East G to Temasek Poly,Tampines Ave 1,11,58.51,0.5
+75231-75221,75231,75221,Tampines Ave 1: Opp Temasek Poly to Opp Temasek Poly East G,Tampines Ave 1,10,64.97,0.4
+75239-75249,75239,75249,Tampines Ave 1: Temasek Poly to Temasek Poly West G,Tampines Ave 1,11,58.51,0.4
+75241-75231,75241,75231,Tampines Ave 1: Opp Temasek Poly West G to Opp Temasek Poly,Tampines Ave 1,10,64.97,0.4
+75311-75361,75311,75361,Tampines Ave 10: Bef Tampines Lk to Bef Tampines Ind Ave 5,Tampines Ave 10,10,52.68,0.3
+75319-75299,75319,75299,Tampines Ave 10: Aft Tampines Lk to Bef Tampines Ave 9,Tampines Ave 10,11,72.79,0.4
+75341-74941,75341,74941,Bedok Reservoir Rd: Opp The Clearwater Condo to Opp Blk 961A,Bedok Reservoir Rd,10,60.49,0.3
+75369-75319,75369,75319,Tampines Ave 10: Bef Tampines Lk to Aft Tampines Lk,Tampines Ave 10,12,78.79,0.3
+76039-76109,76039,76109,Tampines Ave 2: Tampines East Stn Exit C to Blk 302,Tampines Ave 2,11,61.37,0.3
+76059-76069,76059,76069,Tampines Ave 5: Opp Our Tampines Hub to Blk 147,Tampines Ave 5,10,64.76,0.5
+76071-76081,76071,76081,Tampines Ave 2: Blk 141 to Opp The Holy Trinity Ch,Tampines Ave 2,10,57.09,0.5
+76081-76091,76081,76091,Tampines Ave 2: Opp The Holy Trinity Ch to Blk 206,Tampines Ave 2,10,57.09,0.4
+76089-76079,76089,76079,Tampines Ave 2: The Holy Trinity Ch to Blk 101,Tampines Ave 2,10,56.51,0.4
+76099-76089,76099,76089,Tampines Ave 2: Blk 285 to The Holy Trinity Ch,Tampines Ave 2,11,65.08,0.4
+76101-76031,76101,76031,Tampines Ave 2: Tampines East CC to Tampines East Stn Exit B,Tampines Ave 2,15,70.6,0.2
+76231-76241,76231,76241,Tampines Ave 7: Opp Blk 390 to Blk 497D,Tampines Ave 7,20,94.17,0.3
+76241-98011,76241,98011,Tampines Ave 7: Blk 497D to Blk 149A,Tampines Ave 7,14,64.94,0.6
+76249-76239,76249,76239,Tampines Ave 7: Blk 370 to Blk 390,Tampines Ave 7,16,94.63,0.3
+77019-77029,77019,77029,Pasir Ris Dr 1: Blk 515 to Blk 571,Pasir Ris Dr 1,12,56.8,0.4
+77021-77011,77021,77011,Pasir Ris Dr 1: Opp Blk 571 to Opp Blk 515,Pasir Ris Dr 1,10,44.94,0.4
+77249-78049,77249,78049,Pasir Ris Dr 1: Blk 640 to Blk 612,Pasir Ris Dr 1,10,46.14,0.3
+77289-77239,77289,77239,Pasir Ris Dr 1: Blk 738 to Blk 643,Pasir Ris Dr 1,10,46.14,0.3
+78049-77019,78049,77019,Pasir Ris Dr 1: Blk 612 to Blk 515,Pasir Ris Dr 1,12,56.8,0.2
+80011-80031,80011,80031,Kallang Rd: Aft Padang Jeringau to Kallang Stn,Kallang Rd,12,66.36,0.5
+80031-80051,80031,80051,Sims Ave: Kallang Stn to Aft Lor 1 Geylang,Sims Ave,12,66.36,0.3
+80049-80039,80049,80039,Geylang Rd: Aft Sims Way to Opp Lor 1 Geylang Ter,Geylang Rd,13,65.66,0.2
+80051-80071,80051,80071,Sims Ave: Aft Lor 1 Geylang to Yi Xiu Fty Bldg,Sims Ave,11,66.13,0.4
+80069-80049,80069,80049,Geylang Rd: Opp Mohd Salleh Mque to Aft Sims Way,Geylang Rd,12,66.24,0.5
+80071-80091,80071,80091,Sims Ave: Yi Xiu Fty Bldg to Bef Lor 23 Geylang,Sims Ave,13,73.09,0.5
+80089-80069,80089,80069,Geylang Rd: Bef Lor 18 Geylang to Opp Mohd Salleh Mque,Geylang Rd,14,73.21,0.4
+80169-80159,80169,80159,Nicoll Highway: Nicoll Highway Stn to Suntec City,Nicoll Highway,10,44.65,0.7
+81101-81111,81101,81111,Paya Lebar Rd: Paya Lebar Green to Paya Lebar Stn Exit B,Paya Lebar Rd,11,59.65,0.3
+81109-70251,81109,70251,Paya Lebar Rd: Opp Paya Lebar Green to MacPherson Stn Exit C,Paya Lebar Rd,10,47.54,0.5
+81119-81109,81119,81109,Paya Lebar Rd: Paya Lebar Stn Exit C to Opp Paya Lebar Green,Paya Lebar Rd,10,47.71,0.3
+81129-81119,81129,81119,Paya Lebar Rd: Paya Lebar Stn Exit D to Paya Lebar Stn Exit C,Paya Lebar Rd,11,53.89,0.3
+81189-81179,81189,81179,Old Airport Rd: Dakota Stn Exit B/Blk 60 to Blk 22,Old Airport Rd,10,40.93,0.5
+82049-82029,82049,82029,Changi Rd: Joo Chiat Cplx to Blk 14 Mkt/FC,Changi Rd,14,74.22,0.4
+82069-82049,82069,82049,Changi Rd: Aft Lor 106 Changi to Joo Chiat Cplx,Changi Rd,12,64.61,0.5
+83031-83062,83031,83062,Sims Ave East: Opp Hong San Si Tp to Kembangan Stn,Sims Ave East,10,66.82,0.4
+83059-83049,83059,83049,Changi Rd: Mjd Kassim to Bef Lor 110 Changi,Changi Rd,12,67.83,0.2
+83062-83081,83062,83081,Sims Ave East: Kembangan Stn to Opp Perpetual Succour Ch,Sims Ave East,10,66.82,0.5
+83079-83059,83079,83059,Changi Rd: Bef Siglap Plain to Mjd Kassim,Changi Rd,12,67.83,0.4
+83099-83079,83099,83079,Changi Rd: Aft Perpetual Succour Ch to Bef Siglap Plain,Changi Rd,13,72.12,0.4
+83101-83111,83101,83111,Jln Eunos: Eunos Stn to Blk 17,Jln Eunos,17,100.29,0.3
+83111-72011,83111,72011,Jln Eunos: Blk 17 to Blk 322,Jln Eunos,16,92.29,0.5
+83119-83109,83119,83109,Jln Eunos: Opp Blk 16 to Opp Eunos Stn,Jln Eunos,16,104.0,0.2
+84011-84021,84011,84021,New Upp Changi Rd: Chai Chee Ind Pk to Blk 32,New Upp Changi Rd,15,79.13,0.3
+84019-83099,84019,83099,New Upp Changi Rd: Opp Chai Chee Ind Pk to Aft Perpetual Succour Ch,New Upp Changi Rd,12,65.45,0.5
+84029-84019,84029,84019,New Upp Changi Rd: Opp Blk 32 to Opp Chai Chee Ind Pk,New Upp Changi Rd,15,74.59,0.3
+84031-84041,84031,84041,New Upp Changi Rd: Bedok Stn Exit B to Blk 221A,New Upp Changi Rd,13,73.4,0.5
+84049-84039,84049,84039,New Upp Changi Rd: Blk 27 to Bedok Stn Exit A,New Upp Changi Rd,13,74.44,0.7
+84059-84049,84059,84049,New Upp Changi Rd: Blk 65 to Blk 27,New Upp Changi Rd,10,57.05,0.5
+84061-85091,84061,85091,New Upp Changi Rd: The Tanamera Condo to Tanah Merah Stn Exit 2,New Upp Changi Rd,10,47.75,0.5
+92041-92051,92041,92051,Marine Parade Rd: Marine Pde Stn Exit 2 to Marine Pde Stn Exit 4,Marine Parade Rd,14,79.74,0.4
+92071-92081,92071,92081,Marine Parade Rd: Marine Terr Stn Exit 4 to St. Patrick's Sch,Marine Parade Rd,14,72.92,0.3
+92079-92069,92079,92069,Marine Parade Rd: Marine Terr Stn Exit 1 to Tao Nan Sch,Marine Parade Rd,10,52.02,0.5
+92081-93011,92081,93011,Marine Parade Rd: St. Patrick's Sch to Opp Neptune Ct,Marine Parade Rd,14,72.92,0.4
+92089-92079,92089,92079,Marine Parade Rd: Marine Terr Stn/Katong Convent to Marine Terr Stn Exit 1,Marine Parade Rd,10,52.34,0.3
+92159-92149,92159,92149,East Coast Rd: St. Patrick's Sch to St. Patrick's Green,East Coast Rd,10,50.67,0.3
+92161-82071,92161,82071,Tg Katong Rd: Aft Katong PO to Opp Tg Katong Girls' Sch,Tg Katong Rd,10,41.14,0.4
+92249-92041,92249,92041,Amber Rd: Opp Amber Gdns to Marine Pde Stn Exit 2,Amber Rd,12,62.51,0.6
+93011-93021,93011,93021,Marine Parade Rd: Opp Neptune Ct to Opp Mandarin Gdns,Marine Parade Rd,14,72.92,0.4
+93019-92089,93019,92089,Marine Parade Rd: Neptune Ct to Marine Terr Stn/Katong Convent,Marine Parade Rd,16,79.02,0.4
+93029-93019,93029,93019,Marine Parade Rd: Mandarin Gdns to Neptune Ct,Marine Parade Rd,16,79.02,0.4
+93031-93041,93031,93041,Marine Parade Rd: Siglap Stn/Opp Victoria Sch to Hua Xin Ct,Marine Parade Rd,10,49.9,0.7
+93039-93201,93039,93201,Marine Parade Rd: Siglap Stn/Laguna Park to Victoria Sch,Marine Parade Rd,15,71.69,0.3
+93049-93039,93049,93039,Marine Parade Rd: Lagoon View to Siglap Stn/Laguna Park,Marine Parade Rd,15,71.69,0.4
+93059-92159,93059,92159,East Coast Rd: Aft Jln Buloh Perindu to St. Patrick's Sch,East Coast Rd,10,50.67,0.3
+93201-93029,93201,93029,Marine Parade Rd: Victoria Sch to Mandarin Gdns,Marine Parade Rd,13,66.89,0.4
+94011-94021,94011,94021,Upp East Coast Rd: Evergreen Gdn to Bef Sennett Rd,Upp East Coast Rd,10,43.59,0.4
+94021-94031,94021,94031,Upp East Coast Rd: Bef Sennett Rd to Opp Bayshore Stn Exit 3,Upp East Coast Rd,10,43.59,0.3
+94029-94019,94029,94019,Upp East Coast Rd: Aft Sennett Rd to Opp Evergreen Ave,Upp East Coast Rd,11,55.36,0.2
+94031-94041,94031,94041,Upp East Coast Rd: Opp Bayshore Stn Exit 3 to Aft Parbury Ave,Upp East Coast Rd,10,43.59,0.4
+94039-94029,94039,94029,Upp East Coast Rd: Bef Bayshore Stn Exit 3 to Aft Sennett Rd,Upp East Coast Rd,11,55.36,0.4
+94049-94089,94049,94089,Upp East Coast Rd: Aft Bedok Sth Ave 3 to Calvary Ably of God Ch,Upp East Coast Rd,11,55.36,0.2
+94089-94039,94089,94039,Upp East Coast Rd: Calvary Ably of God Ch to Bef Bayshore Stn Exit 3,Upp East Coast Rd,11,55.36,0.3
+95151-95011,95151,95011,Airport Blvd: Airport Police Stn to Aft Aircraft Flyover,Airport Blvd,11,61.71,0.5
+98019-76249,98019,76249,Loyang Ave: Opp Blk 149A to Blk 370,Loyang Ave,11,65.4,0.6

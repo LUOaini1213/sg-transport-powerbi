@@ -1,0 +1,66 @@
+/// LTA DataMall bus stops (list of 26 September 2026) with the planning area each lies in. Stop codes
+/// that appear in the volumes but not in that list are kept, with no location.
+table DimStop
+
+	column StopCode
+		dataType: string
+		isKey
+		summarizeBy: none
+		sourceColumn: StopCode
+
+	column Description
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description
+
+	column RoadName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RoadName
+
+	column PlanningArea
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PlanningArea
+
+	column Latitude
+		dataType: double
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+	column Longitude
+		dataType: double
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+	column InStopList
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: InStopList
+
+	partition DimStop = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_stop.csv") else File.Contents(DataFolder & "dim_stop.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{
+							{"StopCode", type text}, {"Description", type text}, {"RoadName", type text},
+							{"PlanningArea", type text}, {"Latitude", type number}, {"Longitude", type number},
+							{"InStopList", type logical}
+						},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,9 @@
+# Power BI Desktop local files (per user / per machine)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# downloaded validation tooling
+.schemas/
+.tom/
+__pycache__/
+*.pyc
+.pytest_cache/

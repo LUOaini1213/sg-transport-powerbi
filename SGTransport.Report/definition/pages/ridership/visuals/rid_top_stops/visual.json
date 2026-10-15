@@ -1,0 +1,133 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "rid_top_stops",
+  "position": {
+    "x": 20,
+    "y": 470,
+    "z": 6000,
+    "height": 230,
+    "width": 820,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimStop"
+                    }
+                  },
+                  "Property": "StopCode"
+                }
+              },
+              "queryRef": "DimStop.StopCode",
+              "nativeQueryRef": "StopCode"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimStop"
+                    }
+                  },
+                  "Property": "Description"
+                }
+              },
+              "queryRef": "DimStop.Description",
+              "nativeQueryRef": "Description"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimStop"
+                    }
+                  },
+                  "Property": "PlanningArea"
+                }
+              },
+              "queryRef": "DimStop.PlanningArea",
+              "nativeQueryRef": "PlanningArea"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekday Boardings"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekday Boardings",
+              "nativeQueryRef": "Avg Weekday Boardings"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStopRidership"
+                    }
+                  },
+                  "Property": "Avg Weekday Boardings MoM %"
+                }
+              },
+              "queryRef": "FactStopRidership.Avg Weekday Boardings MoM %",
+              "nativeQueryRef": "Avg Weekday Boardings MoM %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactStopRidership"
+                  }
+                },
+                "Property": "Avg Weekday Boardings"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Stops by boardings per weekday'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

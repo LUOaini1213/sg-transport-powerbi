@@ -1,0 +1,110 @@
+/// Every day of 2026. DayType follows LTA DataMall: WEEKDAY is Monday to Friday except MOM public holidays;
+/// everything else is WEEKENDS/HOLIDAY. Marked as the date table.
+table DimDate
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Year
+
+	column MonthNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: MonthNumber
+
+	column MonthName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNumber
+
+	/// Calendar month as text, e.g. 2026-08. Use this column, not Date, to slice ridership: the
+	/// monthly ridership rows join on the first day of their month.
+	column YearMonth
+		dataType: string
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsoWeekday
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: IsoWeekday
+
+	column DayName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DayName
+		sortByColumn: IsoWeekday
+
+	column HolidayName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HolidayName
+
+	column IsPublicHoliday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: IsPublicHoliday
+
+	column DayType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DayType
+
+	/// TRUE for the four months that have DataMall stop volumes (2026-02, -06, -07, -08). Per-day
+	/// ridership measures count only these days, so a multi-month total is divided by the right number.
+	column HasRidershipData
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: HasRidershipData
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "dim_date.csv") else File.Contents(DataFolder & "dim_date.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{
+							{"Date", type date}, {"Year", Int64.Type}, {"MonthNumber", Int64.Type}, {"MonthName", type text},
+							{"YearMonth", type text}, {"MonthStart", type date}, {"IsoWeekday", Int64.Type}, {"DayName", type text},
+							{"HolidayName", type text}, {"IsPublicHoliday", type logical}, {"DayType", type text},
+							{"HasRidershipData", type logical}
+						},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

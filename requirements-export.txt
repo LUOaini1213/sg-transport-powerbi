@@ -1,0 +1,4 @@
+# only for scripts/export_data.py, which needs the raw files of sg-bus-network-monitor
+-r requirements.txt
+geopandas==1.0.1
+shapely==2.0.6

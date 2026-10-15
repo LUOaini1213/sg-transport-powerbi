@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cov_by_area",
+  "position": {
+    "x": 20,
+    "y": 220,
+    "z": 2000,
+    "height": 480,
+    "width": 620,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlanningArea"
+                    }
+                  },
+                  "Property": "PlanningArea"
+                }
+              },
+              "queryRef": "DimPlanningArea.PlanningArea",
+              "nativeQueryRef": "PlanningArea",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPACoverage"
+                    }
+                  },
+                  "Property": "Walk Coverage %"
+                }
+              },
+              "queryRef": "FactPACoverage.Walk Coverage %",
+              "nativeQueryRef": "Walk Coverage %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPACoverage"
+                    }
+                  },
+                  "Property": "Straight-line Coverage %"
+                }
+              },
+              "queryRef": "FactPACoverage.Straight-line Coverage %",
+              "nativeQueryRef": "Straight-line Coverage %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactPACoverage"
+                  }
+                },
+                "Property": "Walk Coverage %"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Coverage by planning area, lowest walking coverage first'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

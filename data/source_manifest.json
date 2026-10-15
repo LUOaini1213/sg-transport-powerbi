@@ -1,0 +1,32 @@
+{
+  "sg_bus_network_monitor_commit": "e20c8174f43eeb7de37f7344086100a6e1aa6e27",
+  "tracked_inputs_at_commit": [
+    "outputs/corridor_links.csv",
+    "outputs/coverage_walk_planning_area.csv"
+  ],
+  "raw_inputs_sha256": {
+    "data/raw/mp2019_planning_area.geojson": "f23856251b467089f788d0fff72ef5a38e753f21aa69b4352401d7ed50d380cc",
+    "data/raw/datamall/BusStops_20260926.json": "9efbea4f3bf146784006db8842a0c84e39d80c04ad4bd193ed64e5c176235842",
+    "data/raw/datamall/speedband_links.csv": "a5ac603de36d788871b7ddbfbec4a844c61ea0c176b41b44acaec6a83ca6a978",
+    "data/raw/datamall/transport_node_bus_202602.csv": "75c75608cde1ae9e50f56ebce2db204530917dd5f4e6939eca66997f4305ee08",
+    "data/raw/datamall/transport_node_bus_202606.csv": "05a29045dcc22339f2341406ccb410a7931187f9b174d43b977f8cdfb1f7ae75",
+    "data/raw/datamall/transport_node_bus_202607.csv": "95b7c4b458f1113123c974cbbba5afb10a446205d86b44f7f19d369859b45837",
+    "data/raw/datamall/transport_node_bus_202608.csv": "fe78b4f0a0c9d467365d7c58cca2dcdaba9356cba4b6afe82b421a110f851389"
+  },
+  "speedband_snapshots": {
+    "count": 209,
+    "first": "sb_20260926_1928.csv.gz",
+    "last": "sb_20261003_0006.csv.gz",
+    "sha256_of_sorted_names_and_hashes": "6f62c8c13907420571c8d0305f7626abc336dc0fd534514baba33ad2cd787ee0"
+  },
+  "matched_speedband_segments": 2228,
+  "outputs_sha256": {
+    "dim_date.csv": "f75845387b4ed1463dd9728003bfc0d92c4f5b010217edce35e9bbafa0c6f4ae",
+    "dim_planning_area.csv": "fc4a3bd3c4c26e7680c7669cf206b3194a83a53137877bd3a9e762155a3ab330",
+    "dim_stop.csv": "c00138554ed70bb7a20bfde2c170a2b34d80e45c2b31f7386cc4f919c570477c",
+    "dim_corridor_link.csv": "e9359037d86dac02982bbbc6478ab1cf4ca6a20a3d2e4b2561780c2c0a2cbcd6",
+    "fact_stop_ridership.csv": "981022e7874a379027a3f8dde9ade4bbf5909203c85a200e369e042f26d05781",
+    "fact_link_hour_speed.csv": "5794be65bd4a41cbbdb72f04fef96ddb45e9fb7dffa6735aedb1cb3ea00e0230",
+    "fact_pa_coverage.csv": "c4e6954c23178bcdf30a063692c3ecd7f3617d81b933768816c6dfac4e2e03ef"
+  }
+}

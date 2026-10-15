@@ -1,0 +1,91 @@
+/// LTA DataMall Passenger Volume by Bus Stops, summed over the hours of the day. Grain: one row per stop,
+/// month and day type. DataMall publishes monthly sums over all days of a type, not daily counts, so the
+/// per-day measures divide by the number of days of that type in the month.
+table FactStopRidership
+
+	/// Total tap-ins on weekdays (Monday to Friday, public holidays excluded) in the filter context.
+	measure 'Weekday Boardings' = CALCULATE(SUM(FactStopRidership[TapIns]), FactStopRidership[DayType] = "WEEKDAY")
+		formatString: #,##0
+
+	/// Tap-ins per weekday: weekday tap-ins divided by the number of weekdays in the months that have data.
+	measure 'Avg Weekday Boardings' =
+			VAR boardings = [Weekday Boardings]
+			VAR days = CALCULATE(COUNTROWS(DimDate), DimDate[DayType] = "WEEKDAY", DimDate[HasRidershipData] = TRUE())
+			RETURN DIVIDE(boardings, days)
+		formatString: #,##0
+
+	/// Tap-ins per Saturday, Sunday or public holiday.
+	measure 'Avg Weekend/Holiday Boardings' =
+			VAR boardings = CALCULATE(SUM(FactStopRidership[TapIns]), FactStopRidership[DayType] = "WEEKENDS/HOLIDAY")
+			VAR days = CALCULATE(COUNTROWS(DimDate), DimDate[DayType] = "WEEKENDS/HOLIDAY", DimDate[HasRidershipData] = TRUE())
+			RETURN DIVIDE(boardings, days)
+		formatString: #,##0
+
+	/// Month-on-month change of the raw monthly weekday total. Shown next to the per-weekday change because
+	/// months have different numbers of weekdays (July 2026: 23, August 2026: 20).
+	measure 'Weekday Boardings MoM %' =
+			VAR cur = [Weekday Boardings]
+			VAR prev = CALCULATE([Weekday Boardings], PREVIOUSMONTH(DimDate[Date]))
+			RETURN IF(ISBLANK(cur) || ISBLANK(prev), BLANK(), DIVIDE(cur - prev, prev))
+		formatString: +0.0%;-0.0%;0.0%
+
+	/// Month-on-month change of tap-ins per weekday.
+	measure 'Avg Weekday Boardings MoM %' =
+			VAR cur = [Avg Weekday Boardings]
+			VAR prev = CALCULATE([Avg Weekday Boardings], PREVIOUSMONTH(DimDate[Date]))
+			RETURN IF(ISBLANK(cur) || ISBLANK(prev), BLANK(), DIVIDE(cur - prev, prev))
+		formatString: +0.0%;-0.0%;0.0%
+
+	/// First day of the month the volumes belong to; joins to DimDate[Date].
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DayType
+
+	column StopCode
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: StopCode
+
+	column TapIns
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		summarizeBy: sum
+		sourceColumn: TapIns
+
+	column TapOuts
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		summarizeBy: sum
+		sourceColumn: TapOuts
+
+	partition FactStopRidership = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(
+						if Text.StartsWith(DataFolder, "http") then Web.Contents(DataFolder & "fact_stop_ridership.csv") else File.Contents(DataFolder & "fact_stop_ridership.csv"),
+						[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+					),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					Typed = Table.TransformColumnTypes(
+						Promoted,
+						{{"MonthStart", type date}, {"DayType", type text}, {"StopCode", type text}, {"TapIns", Int64.Type}, {"TapOuts", Int64.Type}},
+						"en-US"
+					)
+				in
+					Typed
+
+	annotation PBI_ResultType = Table

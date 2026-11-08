@@ -9,18 +9,29 @@ three pages: bus boardings by month, traffic speed on shared bus corridors, and 
 - The project was **authored as text**, in Microsoft's Power BI Project format (PBIP): the semantic model in
   TMDL and the report in PBIR. It was written without Power BI Desktop, which was not available on the machine
   used.
-- **It has not yet been opened or rendered in Power BI Desktop.** Nothing here shows what the pages look like.
-  The steps to open it and take screenshots are [below](#open-it-in-power-bi-desktop).
-- What has been checked without Desktop:
+- **Opened and rendered in Power BI Desktop on 9 November 2026** (version 2.159.1231.0, Chinese UI). The project
+  opened from `SGTransport.pbip` without errors; a refresh loaded every table from the CSV files on GitHub
+  (anonymous access). Screenshots of all three pages and the model view are [below](#screenshots).
+- Checked in Desktop:
+  - a DAX query run by the Analysis Services engine for August 2026 returned Avg Weekday Boardings
+    4,278,652.85, Weekday Boardings 85,573,057, Avg Weekend/Holiday Boardings 3,394,638.91, and MoM changes
+    that round to +1.6% and -11.6%, the values the Python evaluator gives (`docs/screenshots/05-dax-query-check.png`);
+  - the Ridership table total shows 4,278,653 and +1.6%; the Walking coverage cards show 79.7% and 98.5%.
+- Seen in the first render and not yet fixed:
+  - the card visuals use automatic display units, so large values show abbreviated ("4 百万" in the Chinese UI,
+    "4M" in English) instead of the full figure;
+  - four card titles are clipped at the top (Avg Weekday Boardings, Weekday Boardings, Avg Weekend/Holiday
+    Boardings, Total Residents);
+  - the project was not saved from Desktop, so the committed PBIR/TMDL files are unchanged.
+- What was checked before Desktop was available:
   - every PBIP/PBIR JSON file validates against Microsoft's published JSON schemas;
   - Microsoft's Tabular Object Model (TOM) library reads the TMDL folder and its model validation reports no
     errors;
   - the value of every DAX measure is recomputed independently in Python from the CSV files and matches, in 62
     filter contexts (286 measure-context pairs);
   - a mutation check plants 30 deliberate bugs, and each one makes a test fail.
-- What has not been checked: the Power Query (M) steps have not been run by Power BI; the visuals' layout and
-  formatting have not been seen; the DAX has been run by a small Python evaluator written for this project, not
-  by the Analysis Services engine.
+- Not yet checked in Desktop: every other card, chart and table value against `expected/visual_values.csv`
+  (only the figures listed above were compared).
 
 ## Pages
 
@@ -168,7 +179,8 @@ Power BI Desktop runs on Windows 10 or 11 and is free.
 
 ## Screenshots
 
-Not taken yet. To be added from Power BI Desktop (step 8 above):
+Taken in Power BI Desktop 2.159.1231.0 on 9 November 2026, after a refresh from the GitHub CSV files. The UI
+language was Chinese, so totals read 总计 and the card units read 百万 (millions).
 
 | File | Content |
 |---|---|
@@ -176,6 +188,11 @@ Not taken yet. To be added from Power BI Desktop (step 8 above):
 | `docs/screenshots/02-corridor-speeds.png` | Corridor speeds page |
 | `docs/screenshots/03-walking-coverage.png` | Walking coverage page |
 | `docs/screenshots/04-model-view.png` | Model view with the seven relationships |
+| `docs/screenshots/05-dax-query-check.png` | DAX query view: the five Ridership card measures for 2026-08 |
+
+![Ridership page](docs/screenshots/01-ridership.png)
+![Corridor speeds page](docs/screenshots/02-corridor-speeds.png)
+![Walking coverage page](docs/screenshots/03-walking-coverage.png)
 
 ## Repository layout
 

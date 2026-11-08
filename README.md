@@ -1,8 +1,16 @@
 # sg-transport-powerbi
 
-A Power BI report on Singapore's bus network, built from public LTA DataMall, URA and SingStat data. It has
-three pages: bus boardings by month, traffic speed on shared bus corridors, and how many residents live within
-400 m of a bus stop.
+A Power BI project (PBIP: a TMDL semantic model with 7 tables and 13 DAX measures, and a PBIR report with 3 pages)
+on Singapore's bus network, built from public LTA DataMall, URA and SingStat data: bus boardings by month,
+traffic speed on shared bus corridors, and how many residents live within 400 m of a bus stop.
+
+What it shows: from July to August 2026 weekday tap-ins fell 11.6% while tap-ins per weekday rose 1.6% (4.21 M to
+4.28 M), because July had 23 weekdays and August 20. 98.5% of residents live within 400 m of a stop in a straight
+line, and at least 79.7% along the walking network.
+
+Main limits: it was written as text and has never been opened in Power BI Desktop, so there are no screenshots
+and the Power Query steps have never run; the AM-peak speeds rest on one morning (7 snapshots per link); the 79.7%
+is an uncorrected lower bound. See [Limits of the numbers](#limits-of-the-numbers).
 
 ## Status
 
@@ -92,7 +100,9 @@ describes a person. [`data/source_manifest.json`](data/source_manifest.json) rec
 and output.
 
 - **Ridership:** LTA DataMall Passenger Volume by Bus Stops for 2026-02, -06, -07 and -08, summed over the hours
-  of the day. 14 malformed source rows (out of 812,444) are dropped.
+  of the day. 14 malformed source rows (out of 812,444) are dropped. These two counts are from the export's
+  console output; the manifest of this export does not record them. The export now writes them to the manifest
+  (`ridership_source_rows`) on its next run.
 - **Speeds:** 209 LTA DataMall traffic speed-band snapshots, about every 20 minutes from 26 September to
   3 October 2026, with gaps. Speed-band segments are matched to each bus link as in that repository's
   `src/priority.py` (25 m buffer, bearing within 40 degrees, road-name rule; 2,228 matched segments). A
@@ -101,18 +111,27 @@ and output.
 - **Coverage:** that repository's `outputs/coverage_walk_planning_area.csv`: GHS 2025 residents placed on URA
   housing parcels, reach measured in a straight line and along the OpenStreetMap walking network.
 - **Stops and planning areas:** the DataMall stop list of 26 September 2026, joined to the URA Master Plan 2019
-  planning-area polygons (five self-intersecting polygons are repaired first). Four stops are in Johor Bahru and
+  planning-area polygons (five self-intersecting polygons are repaired first; again a console count, written to
+  `planning_area_polygons_repaired` from the next export on). Four stops are in Johor Bahru and
   six stop codes in the volumes are not in that stop list; they get the placeholder planning areas
   `OUTSIDE SINGAPORE` and `STOP NOT IN SEPT 2026 LIST`.
 
-Limits of the numbers:
+### Limits of the numbers
 
-- The weekday AM peak in the speed data is a single morning, Monday 28 September 2026. The AM peak measures are
-  therefore one morning's figures, not a typical peak.
+- The weekday AM peak in the speed data is a single morning, Monday 28 September 2026: 7 speed-band snapshots
+  per link (3 in the hour from 07:00, 4 in the hour from 08:00), against 50 per link at night and 209 in all. The
+  AM peak measures, and the links table sorted by AM-peak-to-night ratio, are therefore one morning's figures
+  from a handful of snapshots, not a typical peak.
 - Speed bands describe general traffic in 10 km/h bands; the band midpoint is used. They are not bus running
   times, and buses also stop at bus stops.
 - The walking-network coverage is a lower bound (OpenStreetMap misses many HDB void-deck shortcuts) and the
   straight-line coverage an upper bound.
+- The 79.7% walking figure was produced by sg-bus-network-monitor's walking-graph builder before a defect that
+  repository records in
+  [`docs/WALK_GRAPH_REVIEW_20261012.md`](https://github.com/LUOaini1213/sg-bus-network-monitor/blob/e20c817/docs/WALK_GRAPH_REVIEW_20261012.md)
+  was fixed: parallel arcs and the access distances of stops sharing one walking node were summed instead of
+  taking the shortest. That can only lengthen walks, so the figure is still a lower bound, but the city-wide
+  coverage has not been recomputed with the corrected builder and no corrected percentage exists.
 - Per-day ridership over several months divides by all the weekdays of those months. A stop that opened during
   that period is therefore averaged over days when it did not exist.
 - Ridership is joined to the date table on the first day of each month. Slice it by month (`DimDate[YearMonth]`),
@@ -125,7 +144,9 @@ Limits of the numbers:
 | JSON schema | Validates all 27 PBIP/PBIR JSON files against the schema URL each declares, using a copy of [microsoft/json-schemas](https://github.com/microsoft/json-schemas) at a pinned commit, with its relative `$ref`s resolved | `tools/validate_schemas.py` |
 | TMDL | Microsoft.AnalysisServices (TOM) 19.117.0 `TmdlSerializer.DeserializeDatabaseFromFolder`, then `Model.Validate()`; the tables, column types, measure text and relationships TOM sees are compared with the test suite's own TMDL reader | `tools/check_tmdl.ps1`, `tests/test_tom_crosscheck.py` |
 | Measures | `pbitest/dax.py` evaluates each measure's DAX text from the TMDL files against the CSVs; `tests/reference.py` computes the same values with pandas on joined tables, without the TMDL or the evaluator. They are compared in 62 filter contexts (286 measure-context pairs): months, planning areas, regions, stops, hours, day types and combinations | `tests/test_measures.py` |
-| Published figures | The 23/20 weekdays, 4.21 M and 4.28 M per weekday, -11.6% and +1.6%, and the 98.5% / 96.7% / 79.7% coverage figures reported by sg-bus-network-monitor | `tests/test_published_figures.py` |
+| Published figures | The 23/20 weekdays, 4.21 M and 4.28 M per weekday, -11.6% and +1.6%, and the 98.5% / 96.7% / 79.7% coverage figures reported by sg-bus-network-monitor. The ridership figures are an independent check (the source computed them from its own files); the coverage figures only confirm that `data/fact_pa_coverage.csv` is a faithful copy of the source's output | `tests/test_published_figures.py` |
+| Data provenance | Every `data/*.csv` has the SHA-256 recorded in `data/source_manifest.json` by the export | `tests/test_manifest.py` |
+| README numbers | The counts in this README (tables, rows, measures, relationships, pages, JSON files, filter contexts, mutants, expected values, snapshots, card values) match the files | `tests/test_readme_numbers.py` |
 | Evaluator | Hand-worked cases on a tiny model: filters through a relationship chain, CALCULATE replacing a filter, `PREVIOUSMONTH` removing other date-table filters, `PERCENTILE.INC`, BLANK rules | `tests/test_dax_engine.py` |
 | Report | Every field a visual uses exists in the model and is not hidden; names follow the PBIR rules; the saved slicer value exists; interactions point at real visuals; the JSON is reproduced by its generator | `tests/test_report.py` |
 | Mutation | 30 planted bugs (18 in the DAX or relationships, 5 in the evaluator, 2 in the data, 5 in the report), each run against the tests meant to catch it. Two controls run first: the unmodified copy passes and a harmless edit survives | `tests/mutate.py` |
@@ -196,6 +217,8 @@ tests/                               pytest suite, pandas reference, mutation ch
 
 ## Run the checks
 
+Python 3.11 (the version CI uses). The commands work in Git Bash on Windows and in a Linux shell.
+
 ```bash
 pip install -r requirements.txt
 bash tools/fetch_schemas.sh                 # Microsoft's JSON schemas at a pinned commit, into .schemas/
@@ -205,15 +228,21 @@ python -m pytest -q
 python tests/mutate.py
 ```
 
-To rebuild the data (needs a checkout of sg-bus-network-monitor with its raw DataMall files):
+The data cannot be rebuilt from public sources alone. The raw DataMall files are not in either repository
+(sg-bus-network-monitor ignores `data/raw/`): DataMall needs an account key, and the 26 September to 3 October
+speed-band snapshots were real-time feeds that cannot be downloaded again. The committed `data/` and the hashes in
+`data/source_manifest.json` (checked by `tests/test_manifest.py`) are the reproducible starting point; every
+measure and expected value is computed from them. With a checkout of sg-bus-network-monitor that still has its
+raw files, the rebuild is:
 
 ```bash
 pip install -r requirements-export.txt
-python scripts/export_data.py --bus-repo ../sg-bus-network-monitor
+python scripts/export_data.py --bus-repo ../sg-bus-network-monitor   # reads outputs/ at the manifest's commit, e20c817
 python tools/expected_values.py
 ```
 
-CI runs the schema validation, the tests and the mutation check on Ubuntu, and the TOM check on Windows.
+CI runs the schema validation, the tests and the mutation check on Ubuntu, and the TOM check and the full test
+suite on Windows.
 
 ## Sources and licences
 

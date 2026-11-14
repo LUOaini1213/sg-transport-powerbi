@@ -8,9 +8,9 @@ What it shows: from July to August 2026 weekday tap-ins fell 11.6% while tap-ins
 4.28 M), because July had 23 weekdays and August 20. 98.5% of residents live within 400 m of a stop in a straight
 line, and at least 79.7% along the walking network.
 
-Main limits: it was written as text and has never been opened in Power BI Desktop, so there are no screenshots
-and the Power Query steps have never run; the AM-peak speeds rest on one morning (7 snapshots per link); the 79.7%
-is an uncorrected lower bound. See [Limits of the numbers](#limits-of-the-numbers).
+Main limits: it was written as text, and how far it has been checked in Power BI Desktop is stated under
+[Status](#status); the AM-peak speeds rest on one morning (7 snapshots per link); the 79.7% is an uncorrected
+lower bound. See [Limits of the numbers](#limits-of-the-numbers).
 
 ## Status
 

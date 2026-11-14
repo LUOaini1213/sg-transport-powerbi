@@ -1,7 +1,14 @@
 """Anchor the measures to figures published in the source repositories' READMEs.
 
-These numbers were measured in sg-bus-network-monitor, not here, so they are a third, external check on top of
-the DAX-vs-pandas comparison:
+These numbers were measured in sg-bus-network-monitor, not here. How independent they are differs:
+
+* the ridership figures were computed there from its own copy of the DataMall files, so matching them is an
+  external check on top of the DAX-vs-pandas comparison;
+* the coverage figures are not: data/fact_pa_coverage.csv is a copy of that repository's
+  outputs/coverage_walk_planning_area.csv, so re-summing it can only confirm the copy and the measure arithmetic,
+  not the coverage method (whose 79.7% predates a walking-graph fix; see the README's limits).
+
+The figures:
 
 * July 2026 had 23 weekdays and August 20 (National Day Monday holiday);
 * weekday boardings per day rose from 4.21 M to 4.28 M (+1.6%) while the raw monthly total fell 11.6%;

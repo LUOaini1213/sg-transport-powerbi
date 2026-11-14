@@ -50,3 +50,11 @@ jobs:
         env:
           TOM_REQUIRED: "1"
         run: python -m pytest -q tests/test_tom_crosscheck.py
+      - name: Fetch Microsoft's PBIP/PBIR JSON schemas (pinned commit)
+        shell: bash
+        run: bash tools/fetch_schemas.sh
+      - name: Full test suite on Windows (line endings, manifest hashes, paths)
+        env:
+          SCHEMAS_REQUIRED: "1"
+          TOM_REQUIRED: "1"
+        run: python -m pytest -q

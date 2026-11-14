@@ -7,6 +7,12 @@ row describes a person.
 
     python scripts/export_data.py --bus-repo ../sg-bus-network-monitor
 
+The tracked outputs/ files are read at --rev, which defaults to the commit recorded in data/source_manifest.json,
+so a re-export reads the same upstream inputs as the committed CSVs rather than whatever upstream main is today.
+The raw DataMall files (data/raw/ upstream) are not in either repository: DataMall needs an account key, and the
+speed-band snapshots are real-time feeds that cannot be downloaded again. The committed data/ plus the manifest's
+hashes (checked by tests/test_manifest.py) is therefore the reproducible starting point.
+
 What it writes to data/:
 
     dim_date.csv               every day of 2026, with the DataMall day type (MOM 2026 public holidays)
@@ -16,7 +22,8 @@ What it writes to data/:
     fact_stop_ridership.csv    tap-ins and tap-outs per stop, month and day type
     fact_link_hour_speed.csv   traffic speed on each corridor link, per date and hour
     fact_pa_coverage.csv       residents within 400 m of a stop, per planning area (three measures)
-    source_manifest.json       SHA-256 of every input file and the source commits
+    source_manifest.json       SHA-256 of every input file and the source commits, rows read and dropped per
+                               ridership file, and the number of planning-area polygons repaired
 
 The speed method follows src/priority.py of sg-bus-network-monitor (commit e20c817): speed-band segments are
 matched to the straight chord between the two stops (25 m buffer, bearing within 40 degrees, road-name rule), a
@@ -39,6 +46,7 @@ from shapely.geometry import LineString
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+MANIFEST = DATA / "source_manifest.json"
 YEAR = 2026
 MONTHS = ["2026-02", "2026-06", "2026-07", "2026-08"]
 MIN_SERVICES = 10
@@ -108,11 +116,13 @@ def dim_date(ridership_months):
 def planning_areas(bus_repo):
     pa = gpd.read_file(bus_repo / "data" / "raw" / "mp2019_planning_area.geojson")[["PLN_AREA_N", "REGION_N", "geometry"]]
     pa = pa.to_crs(3414)
-    # Five MP2019 polygons (e.g. Bukit Merah) are self-intersecting; repair them before the point-in-polygon join.
+    # Some MP2019 polygons (e.g. Bukit Merah) are self-intersecting; repair them before the point-in-polygon join.
+    repaired = int((~pa.is_valid).sum())
+    print(f"planning-area polygons repaired: {repaired}")
     pa["geometry"] = pa.make_valid()
     dim = pa[["PLN_AREA_N", "REGION_N"]].rename(columns={"PLN_AREA_N": "PlanningArea", "REGION_N": "Region"})
     dim = pd.concat([dim, pd.DataFrame({"PlanningArea": [OUTSIDE, UNKNOWN], "Region": ["(none)", "(none)"]})])
-    return pa, dim.sort_values("PlanningArea").reset_index(drop=True)
+    return pa, dim.sort_values("PlanningArea").reset_index(drop=True), repaired
 
 
 def dim_stop(bus_repo, pa_poly, extra_codes):
@@ -140,7 +150,7 @@ def dim_stop(bus_repo, pa_poly, extra_codes):
 # ---------------------------------------------------------------- ridership
 
 def fact_ridership(bus_repo):
-    frames = []
+    frames, counts = [], {}
     for ym in MONTHS:
         f = bus_repo / "data" / "raw" / "datamall" / f"transport_node_bus_{ym.replace('-', '')}.csv"
         v = pd.read_csv(f, dtype={"PT_CODE": str, "YEAR_MONTH": str, "DAY_TYPE": str})
@@ -149,12 +159,13 @@ def fact_ridership(bus_repo):
         ok = (v.YEAR_MONTH == ym) & v.DAY_TYPE.isin(["WEEKDAY", "WEEKENDS/HOLIDAY"]) & v.TIME_PER_HOUR.between(0, 23) \
             & (v.TOTAL_TAP_IN_VOLUME >= 0) & (v.TOTAL_TAP_OUT_VOLUME >= 0) & (v.PT_TYPE == "BUS")
         print(f"{f.name}: {len(v):,} rows, {(~ok).sum()} dropped")
+        counts[f.name] = {"rows": int(len(v)), "dropped": int((~ok).sum())}
         frames.append(v[ok])
     v = pd.concat(frames)
     g = v.groupby(["YEAR_MONTH", "DAY_TYPE", "PT_CODE"], as_index=False)[["TOTAL_TAP_IN_VOLUME", "TOTAL_TAP_OUT_VOLUME"]].sum()
     return pd.DataFrame({"MonthStart": g.YEAR_MONTH + "-01", "DayType": g.DAY_TYPE, "StopCode": g.PT_CODE,
                          "TapIns": g.TOTAL_TAP_IN_VOLUME.astype("int64"),
-                         "TapOuts": g.TOTAL_TAP_OUT_VOLUME.astype("int64")})
+                         "TapOuts": g.TOTAL_TAP_OUT_VOLUME.astype("int64")}), counts
 
 
 # ---------------------------------------------------------------- corridor speeds
@@ -238,16 +249,29 @@ def fact_coverage(bus_repo, rev):
                          "CoveredWalk400m": c.res_walk.round(3)}).sort_values("PlanningArea").reset_index(drop=True)
 
 
+def pinned_commit(manifest=MANIFEST):
+    """The sg-bus-network-monitor commit the committed CSVs were exported from, or None."""
+    try:
+        return json.loads(manifest.read_text(encoding="utf-8"))["sg_bus_network_monitor_commit"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bus-repo", type=Path, required=True)
-    ap.add_argument("--rev", default="origin/main", help="commit of sg-bus-network-monitor to read outputs/ from")
+    ap.add_argument("--rev", default=None,
+                    help="commit of sg-bus-network-monitor to read outputs/ from "
+                         "(default: the commit recorded in data/source_manifest.json)")
     a = ap.parse_args()
     bus = a.bus_repo.resolve()
-    rev = subprocess.run(["git", "-C", str(bus), "rev-parse", a.rev], check=True, capture_output=True, text=True).stdout.strip()
+    wanted = a.rev or pinned_commit()
+    if wanted is None:
+        ap.error("data/source_manifest.json records no commit; pass --rev")
+    rev = subprocess.run(["git", "-C", str(bus), "rev-parse", wanted], check=True, capture_output=True, text=True).stdout.strip()
 
-    ride = fact_ridership(bus)
-    pa_poly, dim_pa = planning_areas(bus)
+    ride, ride_counts = fact_ridership(bus)
+    pa_poly, dim_pa, repaired = planning_areas(bus)
     stops = dim_stop(bus, pa_poly, ride.StopCode.unique())
     cl_raw, links = corridor_links(bus, rev, stops)
     m = match_segments(bus, cl_raw, stops)
@@ -277,9 +301,11 @@ def main():
                                 "sha256_of_sorted_names_and_hashes": hashlib.sha256(
                                     "".join(f"{p.name}{sha256(p)}" for p in snaps).encode()).hexdigest()},
         "matched_speedband_segments": int(len(m)),
+        "ridership_source_rows": ride_counts,
+        "planning_area_polygons_repaired": repaired,
         "outputs_sha256": {name: sha256(DATA / name) for name in outputs},
     }
-    (DATA / "source_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
+    MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":
